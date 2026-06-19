@@ -3631,9 +3631,6 @@ a{color:inherit;text-decoration:none;}
     <!-- ── Main content below hero ── -->
     <div class="sw-dash-body">
 
-      <!-- STAGING: Follow-up alerts -->
-      <div id="sw-dash-alerts" style="display:none;margin-bottom:14px"></div>
-
       <!-- ── Action Cards ── -->
       <div class="sw-dash-cards">
         <div class="sw-action-card" onclick="swank.showScreen('furnishing')">
@@ -3665,6 +3662,9 @@ a{color:inherit;text-decoration:none;}
           </div>
         </div>
       </div>
+
+      <!-- STAGING: Follow-up alerts -->
+      <div id="sw-dash-alerts" style="display:none;margin-top:14px;margin-bottom:0"></div>
 
       <!-- ── Two-column layout: Recent + Todo ── -->
       <div class="sw-dash-columns">
@@ -3895,7 +3895,7 @@ a{color:inherit;text-decoration:none;}
       <div style="display:flex;flex-wrap:wrap;gap:10px">
         <div style="flex:1;min-width:140px">
           <div class="fo-label" style="margin-bottom:4px">Status</div>
-          <select id="fo-f-status" class="fo-input" style="padding:8px 10px;font-size:13px" onchange="furnOrders.applyFilters()">
+          <select id="fo-f-status" class="fo-input" style="padding:8px 10px;font-size:13px" onchange="furnOrders._onFilterChange()">
             <option value="">All Statuses</option>
             <option>Pending</option><option>Ordered</option>
             <option>Received</option><option>Not Available</option><option>In Stock</option>
@@ -3903,13 +3903,13 @@ a{color:inherit;text-decoration:none;}
         </div>
         <div style="flex:1;min-width:140px">
           <div class="fo-label" style="margin-bottom:4px">Company</div>
-          <select id="fo-f-company" class="fo-input" style="padding:8px 10px;font-size:13px" onchange="furnOrders.applyFilters()">
+          <select id="fo-f-company" class="fo-input" style="padding:8px 10px;font-size:13px" onchange="furnOrders._onFilterChange()">
             <option value="">All Companies</option>
           </select>
         </div>
         <div style="flex:1;min-width:140px">
           <div class="fo-label" style="margin-bottom:4px">Customer</div>
-          <select id="fo-f-customer" class="fo-input" style="padding:8px 10px;font-size:13px" onchange="furnOrders.applyFilters()">
+          <select id="fo-f-customer" class="fo-input" style="padding:8px 10px;font-size:13px" onchange="furnOrders._onFilterChange()">
             <option value="">All Customers</option>
           </select>
         </div>
@@ -3917,11 +3917,11 @@ a{color:inherit;text-decoration:none;}
       <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;align-items:flex-end">
         <div style="flex:1;min-width:120px">
           <div class="fo-label" style="margin-bottom:4px">Date Ordered — From</div>
-          <input type="date" id="fo-date-from" class="fo-input" style="padding:8px 10px;font-size:13px" onchange="furnOrders.applyFilters()">
+          <input type="date" id="fo-date-from" class="fo-input" style="padding:8px 10px;font-size:13px" onchange="furnOrders._onFilterChange()">
         </div>
         <div style="flex:1;min-width:120px">
           <div class="fo-label" style="margin-bottom:4px">To</div>
-          <input type="date" id="fo-date-to" class="fo-input" style="padding:8px 10px;font-size:13px" onchange="furnOrders.applyFilters()">
+          <input type="date" id="fo-date-to" class="fo-input" style="padding:8px 10px;font-size:13px" onchange="furnOrders._onFilterChange()">
         </div>
         <button class="inner-action" style="padding:8px 14px;font-size:12px;flex-shrink:0" onclick="furnOrders.clearAllFilters()">Clear All</button>
       </div>
@@ -13618,10 +13618,7 @@ var furnOrders = (function(){
   }
 
   function applyFilters() {
-    FO.fab.page = 1;
-    FO.bli.page = 1;
-    _loadTab('fabric');
-    _loadTab('blinds');
+    _onFilterChange();
   }
 
   function clearAllFilters() {
@@ -13652,15 +13649,50 @@ var furnOrders = (function(){
     if (!open && !FO.filterOptionsLoaded) _loadFilterOptions();
   }
 
+  function _onFilterChange() {
+    FO.fab.page = 1;
+    FO.bli.page = 1;
+    _loadTab('fabric');
+    _loadTab('blinds');
+    _loadFilterOptions();
+  }
+
   function _loadFilterOptions() {
-    _api('GET', '/api/furnishing-orders/filter-options')
+    var params = {
+      itemType: FO.activeTab === 'fabric' ? 'Fabric' : 'Blinds',
+      status:   _val('fo-f-status')   || '',
+      company:  _val('fo-f-company')  || '',
+      customer: _val('fo-f-customer') || '',
+      dateFrom: _val('fo-date-from')  || '',
+      dateTo:   _val('fo-date-to')    || ''
+    };
+    var curCompany  = _val('fo-f-company');
+    var curCustomer = _val('fo-f-customer');
+    var curStatus   = _val('fo-f-status');
+
+    _api('POST', '/api/furnishing-orders/filter-options', params)
       .then(function(r){
         if (!r || !r.success) return;
         FO.filterOptionsLoaded = true;
-        _rebuildSelect('fo-f-company',  'All Companies', r.companies, _val('fo-f-company'));
-        _rebuildSelect('fo-f-customer', 'All Customers', r.customers, _val('fo-f-customer'));
+        _rebuildSelect('fo-f-company',  'All Companies', r.companies || [], curCompany);
+        _rebuildSelect('fo-f-customer', 'All Customers', r.customers || [], curCustomer);
+        if (r.statuses && r.statuses.length) _rebuildStatusSelect(r.statuses, curStatus);
       })
-      .catch(function(){})
+      .catch(function(){});
+  }
+
+  function _rebuildStatusSelect(availableStatuses, currentVal) {
+    var sel = _el('fo-f-status');
+    if (!sel) return;
+    var ALL = ['Pending','Ordered','Received','Not Available','In Stock'];
+    sel.innerHTML = '<option value="">All Statuses</option>'
+      + ALL.map(function(s){
+          var avail = availableStatuses.indexOf(s) >= 0;
+          return '<option value="'+_esc(s)+'"'+(s===currentVal?' selected':'')
+            +(avail ? '' : ' style="color:var(--sw-txt4)"')
+            +'>'+_esc(s)+(avail ? '' : ' (0)')+'</option>';
+        }).join('');
+    if (currentVal) sel.value = currentVal;
   }
 
   function _rebuildSelect(id, placeholder, values, currentVal) {
@@ -14246,7 +14278,7 @@ var furnOrders = (function(){
   }
 
   return {
-    load, switchTab, filter, clearSearch,
+    load, switchTab, _onFilterChange, filter, clearSearch,
     setStatusFilter, applyFilters, clearDateFilter, clearAllFilters, toggleFilters,
     exportExcel,
     openMenu, closeMenu,
