@@ -3439,6 +3439,26 @@ a{color:inherit;text-decoration:none;}
 @media(min-width:768px){
   #users-list{ display:block !important; grid-template-columns:unset !important; gap:0 !important; }
 }
+</style><style>
+/* STAGING: Home screen 2-col bottom row — Alerts | Todo */
+.sw-home-bottom-row{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  margin-top:14px;
+}
+.sw-home-col-alerts{ width:100%; }
+.sw-home-col-todo{ width:100%; }
+
+@media(min-width:768px){
+  .sw-home-bottom-row{
+    flex-direction:row;
+    align-items:flex-start;
+    gap:16px;
+  }
+  .sw-home-col-alerts{ flex:1.2; min-width:0; }
+  .sw-home-col-todo{   flex:1;   min-width:0; }
+}
 </style></head>
 <body>
 <div id="app">
@@ -3547,15 +3567,15 @@ a{color:inherit;text-decoration:none;}
     <div class="drawer-item" onclick="swank.showScreen('prices');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>Price Finder</div>
     <div class="drawer-item" onclick="swank.showScreen('estimates');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg>Estimates</div>
     <div class="drawer-item" onclick="swank.showScreen('sofa');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9H3V9z"/><path d="M3 13h18"/><path d="M5 18v2"/><path d="M19 18v2"/></svg>Sofa Covers</div>
+    <div class="drawer-item" onclick="swank.showScreen('furnishing');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Furnishing</div>
+    <div class="drawer-item" onclick="swank.showScreen('customers');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Customers</div>
+    <div class="drawer-item" onclick="swank.showScreen('analytics');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Analytics</div>
     <div class="drawer-item" onclick="swank.showScreen('favorites');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Favourites</div>
     <div class="drawer-item" onclick="swank.showScreen('history');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>History</div>
     <div class="drawer-divider"></div>
     <div class="drawer-section-label">Admin</div>
     <div class="drawer-item" id="drawer-users-item" style="display:none" onclick="swank.showScreen('users');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Manage Users</div>
-    <!-- STAGING: new module drawer items -->
-    <div class="drawer-item" onclick="swank.showScreen('customers');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Customers</div>
-    <div class="drawer-item" onclick="swank.showScreen('furnishing');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Furnishing</div>
-    <div class="drawer-item" onclick="swank.showScreen('analytics');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Analytics</div>
+    
     <div class="drawer-item" onclick="swank.showScreen('settings');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Settings</div>
     <div class="drawer-item" onclick="swank.showScreen('about');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>About SWANK</div>
   </div>
@@ -3663,13 +3683,38 @@ a{color:inherit;text-decoration:none;}
         </div>
       </div>
 
-      <!-- STAGING: Follow-up alerts -->
-      <div id="sw-dash-alerts" style="display:none;margin-top:14px;margin-bottom:0"></div>
+      <!-- STAGING: 2-col row: Alerts (left) + Todo (right) on desktop -->
+      <div class="sw-home-bottom-row">
 
-      <!-- ── Two-column layout: Recent + Todo ── -->
+        <!-- Left col: Follow-up alerts -->
+        <div class="sw-home-col-alerts">
+          <div id="sw-dash-alerts" style="display:none"></div>
+        </div>
+
+        <!-- Right col: To-Do -->
+        <div class="sw-home-col-todo">
+          <div class="sw-todo-wrap sw-todo-dash-wrap" onclick="swank.showScreen('todo')" style="cursor:pointer">
+            <div class="section-header" style="margin-bottom:12px">
+              <span class="section-title">To-Do</span>
+              <span class="sw-todo-count" id="sw-todo-count"></span>
+            </div>
+            <div class="sw-todo-list sw-todo-dash-list" id="sw-todo-list">
+              <div class="sw-todo-empty">Loading tasks…</div>
+            </div>
+            <div id="sw-todo-dash-empty" style="display:none">
+              <div class="sw-todo-empty-cta">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="6" height="6" rx="1"/><rect x="3" y="13" width="6" height="6" rx="1"/><line x1="13" y1="8" x2="21" y2="8"/><line x1="13" y1="16" x2="21" y2="16"/></svg>
+                <p>No pending tasks</p>
+                <button class="sw-todo-cta-btn" onclick="event.stopPropagation();swank.showScreen('todo')">+ Add Task</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Recent + Favourites (full width below, mobile + desktop) -->
       <div class="sw-dash-columns">
-
-        <!-- Left: Recent Collections -->
         <div class="sw-dash-col-left">
           <div class="section-block" id="recent-section" style="display:none">
             <div class="section-header">
@@ -3686,30 +3731,9 @@ a{color:inherit;text-decoration:none;}
             <div class="chips-row" id="fav-chips"></div>
           </div>
         </div>
+        <div class="sw-dash-col-right"></div>
+      </div>
 
-        <!-- Right: To-Do Summary (pending only, taps to todo screen) -->
-        <div class="sw-dash-col-right">
-          <div class="sw-todo-wrap sw-todo-dash-wrap" onclick="swank.showScreen('todo')" style="cursor:pointer">
-            <div class="section-header" style="margin-bottom:12px">
-              <span class="section-title">To-Do</span>
-              <span class="sw-todo-count" id="sw-todo-count"></span>
-            </div>
-            <!-- Pending tasks preview (max 3) -->
-            <div class="sw-todo-list sw-todo-dash-list" id="sw-todo-list">
-              <div class="sw-todo-empty">Loading tasks…</div>
-            </div>
-            <!-- Empty state CTA -->
-            <div id="sw-todo-dash-empty" style="display:none">
-              <div class="sw-todo-empty-cta">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="6" height="6" rx="1"/><rect x="3" y="13" width="6" height="6" rx="1"/><line x1="13" y1="8" x2="21" y2="8"/><line x1="13" y1="16" x2="21" y2="16"/></svg>
-                <p>No pending tasks</p>
-                <button class="sw-todo-cta-btn" onclick="event.stopPropagation();swank.showScreen('todo')">+ Add Task</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-  
     </div>
   </div>
 </section>
