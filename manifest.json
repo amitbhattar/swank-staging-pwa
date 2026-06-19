@@ -1,0 +1,22 @@
+{
+  "name": "SWANK",
+  "short_name": "SWANK",
+  "description": "SWANK Curtains \u2014 Price Finder and Estimates",
+  "start_url": "/app.html",
+  "display": "standalone",
+  "background_color": "#FAF7F3",
+  "theme_color": "#3A2D28",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "scope": "/"
+}
