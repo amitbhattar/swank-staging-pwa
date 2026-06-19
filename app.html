@@ -6634,6 +6634,7 @@ var swank = (function(){
     if(name==='projects')   { try { if(typeof swankProjects!=='undefined')  swankProjects.load();  } catch(e){ console.warn('[Projects]',e);  } }
     if(name==='measurements')   { try { if(typeof swankMeasurements!=='undefined') swankMeasurements.load(); } catch(e){ console.warn('[Measurements]',e); } }
     if(name==='measurement-detail') { /* loaded by openProject */ }
+    if(name==='settings') { try { if(typeof _loadMeasParamsUI==='function') _loadMeasParamsUI(); } catch(e){} }
     if(name==='project-detail') { /* loaded by openProject */ }
     if(name==='customers')  { try { if(typeof swankCustomers!=='undefined') swankCustomers.load(); } catch(e){ console.warn('[Customers]',e); } }
     if(name==='analytics')  { try { if(typeof swankAnalytics!=='undefined') swankAnalytics.load(); } catch(e){ console.warn('[Analytics]',e); } }
