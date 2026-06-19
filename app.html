@@ -5218,6 +5218,7 @@ var swank = (function(){
     _renderRecentChips();
     _renderFavChips();
     _loadTasks();
+    _loadHomeAlerts();
     if(S.session && (S.session.role==='ADMIN'||S.session.role==='MANAGER')){
       var di=document.getElementById('drawer-users-item');
       if(di) di.style.display='flex';
