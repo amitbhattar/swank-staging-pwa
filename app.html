@@ -5510,7 +5510,7 @@ var swank = (function(){
   };
 
   /* ── Cloudflare Worker API helper ── */
-  var WORKER_URL = 'https://swank-api.amitbhattar789.workers.dev';
+  var WORKER_URL = 'https://swank-api-staging.amitbhattar789.workers.dev'; // STAGING
 
   function _api(method, path, body) {
     // Get token from swank.getSession() so this works both inside and outside the IIFE
@@ -6028,13 +6028,13 @@ var swank = (function(){
     // Sofa module ΓÇö init on landing; sub-screens handled by sfShowPrices/sfShowEstimates/sfShowOrders
     if(name==='sofa') { try { if(typeof sfInit==='function') sfInit(); } catch(e){ console.warn('[SofaModule]',e); } }
     // Furnishing module
-    if(name==='furnishing') { _loadFurnishingHero(); }
+    if(name==='furnishing') { try { _loadFurnishingHero(); } catch(e){ console.warn('[FurnHero]',e); } }
     if(name==='furn-orders') { try { if(typeof furnOrders!=='undefined') furnOrders.load(); } catch(e){ console.warn('[FurnOrders]',e); } }
     if(name==='projects')   { try { if(typeof swankProjects!=='undefined')  swankProjects.load();  } catch(e){ console.warn('[Projects]',e);  } }
     if(name==='project-detail') { /* loaded by openProject */ }
     if(name==='customers')  { try { if(typeof swankCustomers!=='undefined') swankCustomers.load(); } catch(e){ console.warn('[Customers]',e); } }
     if(name==='analytics')  { try { if(typeof swankAnalytics!=='undefined') swankAnalytics.load(); } catch(e){ console.warn('[Analytics]',e); } }
-    if(name==='home')       { _updateDashboardName(); _loadHomeAlerts(); }
+    if(name==='home')       { _updateDashboardName(); try { _loadHomeAlerts(); } catch(e){ console.warn('[HomeAlerts]',e); } }
   }
 
 
@@ -6313,6 +6313,53 @@ var swank = (function(){
     });
   }
 
+
+
+
+  /* ── STAGING: Furnishing hero ── */
+  function _loadFurnishingHero() {
+    // Hero image src is hardcoded in HTML and loads via onload handler.
+    // This stub prevents ReferenceError when showScreen('furnishing') fires.
+  }
+
+  /* ── STAGING: Home follow-up alerts ── */
+  function _loadHomeAlerts() {
+    var el = document.getElementById('sw-dash-alerts');
+    if (!el) return;
+    _api('GET', '/api/analytics')
+      .then(function(r) {
+        if (!r || !r.success) { el.style.display='none'; return; }
+        // Pre-populate analytics module so it does not re-fetch on navigate
+        try {
+          if (typeof swankAnalytics !== 'undefined' && swankAnalytics._injectData)
+            swankAnalytics._injectData(r);
+        } catch(e) {}
+        var alerts = (r.alerts && r.alerts.followUp) || [];
+        if (!alerts.length) { el.style.display='none'; return; }
+        var MAX = 5;
+        var shown = alerts.slice(0, MAX);
+        var html = '<div class="sw-alert-block">'
+          + '<div class="sw-alert-header">'
+          + '<div class="sw-alert-title">'
+          + '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>'
+          + 'Follow-Up <span class="sw-alert-count">' + alerts.length + '</span>'
+          + '</div>'
+          + (alerts.length > MAX ? '<button class="sw-alert-see-all" onclick="swank.showScreen(\'analytics\')">See all</button>' : '')
+          + '</div>';
+        shown.forEach(function(a) {
+          var fmt = (typeof _fmtDisplayDate === 'function') ? _fmtDisplayDate(a.date) : (a.date||'');
+          html += '<div class="sw-alert-item" onclick="swankEst&&swankEst.openById&&swankEst.openById(\'' + _esc(a.id) + '\')">'
+            + '<div class="sw-alert-item-name">' + _escHtml(a.customerName||'—') + '</div>'
+            + '<div class="sw-alert-item-meta">' + fmt + '</div>'
+            + '<div class="sw-alert-item-days">' + a.daysOld + 'd</div>'
+            + '</div>';
+        });
+        html += '</div>';
+        el.innerHTML = html;
+        el.style.display = '';
+      })
+      .catch(function() { el.style.display='none'; });
+  }
 
 
   /* ════════════════════════════════════════
