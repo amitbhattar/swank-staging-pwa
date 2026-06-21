@@ -2033,7 +2033,7 @@ a{color:inherit;text-decoration:none;}
 .ul-row:hover{ background:var(--sw-surface2); }
 .ul-row:active{ background:var(--sw-strip); }
 
-/* Avatar ΓÇö smaller than mgmt card */
+/* Avatar — smaller than mgmt card */
 .ul-avatar{
   width:34px;height:34px;border-radius:50%;
   background:var(--sw-strip);
@@ -2117,14 +2117,14 @@ a{color:inherit;text-decoration:none;}
 .sw-user-add-btn:active{ transform:scale(.98);background:var(--sw-txt); }
 .sw-user-add-btn:disabled{ opacity:.5;cursor:not-allowed; }
 
-/* ΓöÇΓöÇ Form field label pair ΓöÇΓöÇ */
+/* ── Form field label pair ── */
 .sw-form-field{ display:flex;flex-direction:column;gap:5px; }
 .sw-form-label{
   font-size:10px;font-weight:700;letter-spacing:.1em;
   text-transform:uppercase;color:var(--sw-txt3);
 }
 
-/* ΓöÇΓöÇ User detail slide-up panel ΓöÇΓöÇ */
+/* ── User detail slide-up panel ── */
 .sw-user-panel{
   background:var(--sw-surface);
   border-radius:var(--sw-r-xl) var(--sw-r-xl) 0 0;
@@ -2190,7 +2190,7 @@ a{color:inherit;text-decoration:none;}
   flex-shrink:0;
 }
 
-/* ΓöÇΓöÇ Edit form inside panel ΓöÇΓöÇ */
+/* ── Edit form inside panel ── */
 .sw-user-edit-form{
   padding:16px 20px;
   display:flex;flex-direction:column;gap:10px;
@@ -2207,7 +2207,7 @@ a{color:inherit;text-decoration:none;}
 }
 .sw-user-edit-input:focus{ border-color:var(--sw-accent); }
 
-/* ΓöÇΓöÇ Device badge ΓöÇΓöÇ */
+/* ── Device badge ── */
 .sw-device-badge{
   display:inline-flex;align-items:center;gap:5px;
   padding:3px 10px;border-radius:100px;font-size:10px;font-weight:700;
@@ -2220,7 +2220,7 @@ a{color:inherit;text-decoration:none;}
   background:rgba(110,90,73,.08);color:var(--sw-txt3);
 }
 
-/* ΓöÇΓöÇ User card clickable indicator ΓöÇΓöÇ */
+/* ── User card clickable indicator ── */
 .user-mgmt-card:hover{
   box-shadow:var(--sw-shd-md);
   transform:translateY(-1px);
@@ -2233,7 +2233,7 @@ a{color:inherit;text-decoration:none;}
 [data-swank-theme="dark"] .sw-user-edit-input{ background:var(--sw-surface2);border-color:var(--sw-border2); }
 
 
-/* ΓöÇΓöÇ Drawer section labels + divider (mirrors sidebar) ΓöÇΓöÇ */
+/* ── Drawer section labels + divider (mirrors sidebar) ── */
 .drawer-section-label{
   font-size:9px;font-weight:700;letter-spacing:.16em;
   text-transform:uppercase;color:var(--sw-txt4);
@@ -2258,9 +2258,9 @@ a{color:inherit;text-decoration:none;}
 .sw-confirm-ok.danger{ background:var(--sw-danger); }
 .sw-confirm-ok.danger:hover{ background:#9B2C1A; }
 
-/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+/* ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬
    TO-DO FULL SCREEN
-   ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+   ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
 .todo-filter-bar{
   display:flex;gap:8px;padding:0 0 16px;
   overflow-x:auto;flex-shrink:0;
@@ -2370,19 +2370,19 @@ a{color:inherit;text-decoration:none;}
 .sw-todo-cta-btn:hover{background:var(--sw-accent);color:#FAF7F3;}
 
 
-/* ΓöÇΓöÇ Universal bottom nav clearance ΓöÇΓöÇ
+/* ── Universal bottom nav clearance ──
    All main scrollable areas on mobile must clear the fixed bottom nav.
    --sw-nav = 66px on mobile, 0px on desktop (1024px+)
-   ΓöÇΓöÇ */
+   ── */
 .screen-scroll,
 .sw-dash-scroll {
   scroll-padding-bottom: calc(var(--sw-nav) + var(--sw-safe));
 }
 
-/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+/* ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬
    DARK MODE ELEMENT OVERRIDES
    Rich dark gold for text, dark surfaces for cards
-   ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+   ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
 [data-swank-theme="dark"] .sw-action-card{
   background:var(--sw-surface);
   border-color:var(--sw-border);
@@ -2507,7 +2507,7 @@ a{color:inherit;text-decoration:none;}
   background:var(--sw-surface);
   border:1px solid var(--sw-border);
 }
-/* ΓöÇΓöÇ Design 2 responsive ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+/* ── Design 2 responsive ─────────────────────────────────── */
 /* Fluid layout via minmax() handles all breakpoints automatically.
    Only one explicit override needed: stack at very small screens. */
 
@@ -2589,16 +2589,16 @@ a{color:inherit;text-decoration:none;}
   color:var(--sw-accent);
 }
 
-/* ΓòÉΓòÉ FURNISHING MODULE ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+/* ╬╬ FURNISHING MODULE ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬
    Uses shared sw-hero, sf-hero-back, sw-dash-body,
-   sw-dash-cards from SwankStyles ΓÇö no custom hero
+   sw-dash-cards from SwankStyles — no custom hero
    or back-button CSS needed here.
-ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
 </style>
 
 <!-- STAGING: Customer Screen Styles -->
 <style>
-/* ΓòÉΓòÉ CUSTOMER PROFILE OVERLAY ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+/* ╬╬ CUSTOMER PROFILE OVERLAY ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
 .cp-overlay{
   position:fixed;left:0;top:0;bottom:0;
   width:420px;max-width:100%;
@@ -2650,7 +2650,7 @@ a{color:inherit;text-decoration:none;}
   padding:16px;
 }
 
-/* ΓöÇΓöÇ Info card ΓöÇΓöÇ */
+/* ── Info card ── */
 .cp-info-card{
   background:var(--sw-surface);border:1px solid var(--sw-border);
   border-radius:var(--sw-r-lg);padding:16px;margin-bottom:14px;
@@ -2673,7 +2673,7 @@ a{color:inherit;text-decoration:none;}
   font-family:var(--sw-font-b);font-size:14px;font-weight:600;color:var(--sw-txt);
 }
 
-/* ΓöÇΓöÇ Edit fields ΓöÇΓöÇ */
+/* ── Edit fields ── */
 .cp-edit-field{
   display:flex;flex-direction:column;gap:4px;margin-bottom:10px;
 }
@@ -2692,7 +2692,7 @@ a{color:inherit;text-decoration:none;}
   display:flex;gap:8px;margin-top:12px;
 }
 
-/* ΓöÇΓöÇ Sections ΓöÇΓöÇ */
+/* ── Sections ── */
 .cp-section{
   margin-bottom:14px;
 }
@@ -2745,7 +2745,7 @@ a{color:inherit;text-decoration:none;}
 .cp-badge-draft{ background:var(--sw-surface2);color:var(--sw-txt3); }
 .cp-badge-final{ background:rgba(61,122,80,.12);color:var(--sw-green); }
 
-/* ΓöÇΓöÇ Loading / error states ΓöÇΓöÇ */
+/* ── Loading / error states ── */
 .cp-loading{
   display:flex;align-items:center;justify-content:center;
   padding:40px;gap:12px;color:var(--sw-txt3);font-size:13px;
@@ -2758,7 +2758,7 @@ a{color:inherit;text-decoration:none;}
 [data-swank-theme="dark"] .cp-edit-input{ background:var(--sw-surface2);border-color:var(--sw-border2);color:var(--sw-txt); }
 [data-swank-theme="dark"] .cp-table th{ background:var(--sw-surface); }
 
-/* ΓöÇΓöÇ Responsive: desktop sidebar offset ΓöÇΓöÇ */
+/* ── Responsive: desktop sidebar offset ── */
 @media(min-width:1024px){
   .cp-overlay{
     top:var(--sw-hdr,60px);  /* sit below header, not over it */
@@ -2774,12 +2774,12 @@ a{color:inherit;text-decoration:none;}
   .cp-overlay{ left:var(--sw-sidebar,280px); }
 }
 
-/* ΓöÇΓöÇ cp-body inputs keyboard clearance ΓöÇΓöÇ */
+/* ── cp-body inputs keyboard clearance ── */
 .cp-body input,
 .cp-body textarea {
   scroll-margin-bottom: 80px;
 }
-/* ΓöÇΓöÇ Project cards in customer profile ΓöÇΓöÇ */
+/* ── Project cards in customer profile ── */
 .cp-proj-card{
   background:var(--sw-surface);border:1px solid var(--sw-border);
   border-radius:var(--sw-r-md);padding:12px 14px;margin-bottom:8px;
@@ -2790,7 +2790,7 @@ a{color:inherit;text-decoration:none;}
 .cp-proj-name{ font-size:13px;font-weight:700;color:var(--sw-txt);margin-bottom:2px; }
 .cp-proj-meta{ font-size:11px;color:var(--sw-txt3); }
 
-/* ΓöÇΓöÇ Project add/edit sheet (reuses todo-add-sheet pattern) ΓöÇΓöÇ */
+/* ── Project add/edit sheet (reuses todo-add-sheet pattern) ── */
 #proj-add-sheet{
   position:fixed;bottom:0;left:0;right:0;z-index:2100;
   background:var(--sw-bg);
@@ -2818,16 +2818,16 @@ a{color:inherit;text-decoration:none;}
 
 <!-- STAGING: Furnishing Orders Styles -->
 <style>
-/* ΓòÉΓòÉ FURNISHING ORDER MANAGEMENT ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+/* ╬╬ FURNISHING ORDER MANAGEMENT ╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
 
-/* ΓöÇΓöÇ Tab bar ΓöÇΓöÇ */
+/* ── Tab bar ── */
 .fo-tab-bar{
   display:flex;gap:8px;margin-bottom:14px;
   overflow-x:auto;scrollbar-width:none;padding-bottom:2px;
 }
 .fo-tab-bar::-webkit-scrollbar{display:none}
 
-/* ΓöÇΓöÇ Search bar ΓöÇΓöÇ */
+/* ── Search bar ── */
 #fo-search-clear{
   display:none;position:relative;z-index:2;
   background:none;border:none;color:var(--sw-txt3);
@@ -2835,7 +2835,7 @@ a{color:inherit;text-decoration:none;}
   flex-shrink:0;-webkit-tap-highlight-color:transparent;
 }
 
-/* ΓöÇΓöÇ Table wrapper ΓÇö Phase C responsive column shedding ΓöÇΓöÇ */
+/* ── Table wrapper — Phase C responsive column shedding ── */
 .fo-table-wrap{
   overflow-x:auto;-webkit-overflow-scrolling:touch;
   margin:0 -18px;padding:0 18px;
@@ -2867,10 +2867,10 @@ a{color:inherit;text-decoration:none;}
 @media(min-width:1024px){
   .fo-table.fo-fabric-tbl,
   .fo-table.fo-blinds-tbl{
-    min-width:0;          /* remove fixed min ΓÇö table fills container exactly */
+    min-width:0;          /* remove fixed min — table fills container exactly */
     table-layout:fixed;   /* browser distributes width proportionally */
   }
-  /* Fabric column widths ΓÇö percentages of total table width */
+  /* Fabric column widths — percentages of total table width */
   .fo-fabric-tbl .fc-ordnum  { width:8%; }
   .fo-fabric-tbl .fc-cust    { width:13%; }
   .fo-fabric-tbl .fc-company { width:10%; }
@@ -2904,9 +2904,9 @@ a{color:inherit;text-decoration:none;}
     text-overflow:ellipsis;
     white-space:nowrap;
   }
-  /* Remark ΓÇö allow it to be slightly shorter */
+  /* Remark — allow it to be slightly shorter */
   .fo-table .fc-remark { }
-  /* Γï« menu column ΓÇö fixed narrow */
+  /* Γï« menu column — fixed narrow */
   .fo-td-menu, .fo-table thead th:last-child { width:36px; text-overflow:clip; }
 }
 .fo-table thead th{
@@ -2927,11 +2927,11 @@ a{color:inherit;text-decoration:none;}
 .fo-table tbody tr:last-child td{border-bottom:none;}
 .fo-table tbody tr:hover{background:var(--sw-surface2);}
 
-/* ΓöÇΓöÇ Phase C: responsive column visibility ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+/* ── Phase C: responsive column visibility ──────────────
    Mobile   (< 600px):  Order#, Customer, Status, Γï«
    Tablet  (600ΓÇô1023px): + Company / BlindType, Date, Remark
    Desktop (ΓëÑ 1024px):   All columns
-ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+─────────────────────────────────────────────────────── */
 /* Columns hidden on mobile */
 .fo-col-tablet,
 .fo-col-desktop { display:none; }
@@ -2943,13 +2943,13 @@ a{color:inherit;text-decoration:none;}
   .fo-col-desktop { display:table-cell; }
 }
 
-/* ΓöÇΓöÇ Mobile card layout (< 600px) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+/* ── Mobile card layout (< 600px) ───────────────────────
    On mobile the table collapses to single-column cards.
    Each <tr> becomes a block; the fc-cust cell becomes the card.
-   All other visible cells are hidden ΓÇö their content is
+   All other visible cells are hidden — their content is
    embedded in the card HTML by _renderFabric/_renderBlinds.
-ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
-/* Hidden by default ΓÇö only shown inside the mobile media query below */
+─────────────────────────────────────────────────────── */
+/* Hidden by default — only shown inside the mobile media query below */
 .fo-mob-card{ display:none; }
 
 @media(max-width:599px){
@@ -3086,7 +3086,7 @@ a{color:inherit;text-decoration:none;}
   text-align:center;padding:40px 20px;color:var(--sw-txt3);font-size:13px;
 }
 
-/* ΓöÇΓöÇ Phase B: Pagination controls ΓöÇΓöÇ */
+/* ── Phase B: Pagination controls ── */
 .fo-pagination{
   display:flex;align-items:center;justify-content:space-between;
   flex-wrap:wrap;gap:8px;
@@ -3168,7 +3168,7 @@ a{color:inherit;text-decoration:none;}
 }
 .fo-row-selected{ background:var(--sw-strip) !important; }
 
-/* Add Order sheet ΓÇö extends todo-add-sheet */
+/* Add Order sheet — extends todo-add-sheet */
 .fo-sheet-body{
   display:flex;flex-direction:column;gap:10px;
   max-height:65vh;overflow-y:auto;-webkit-overflow-scrolling:touch;
@@ -3238,8 +3238,8 @@ a{color:inherit;text-decoration:none;}
 
 <!-- STAGING: Analytics Styles -->
 <style>
-/* ΓöÇΓöÇ Analytics screen ΓöÇΓöÇ */
-/* Uses .screen-scroll from SwankStyles ΓÇö no padding override needed */
+/* ── Analytics screen ── */
+/* Uses .screen-scroll from SwankStyles — no padding override needed */
 
 /* Period toggle */
 .an-period-bar{
@@ -3296,7 +3296,7 @@ a{color:inherit;text-decoration:none;}
   border-bottom:1px solid var(--sw-border);
 }
 
-/* Stat grid ΓÇö 2-col mobile, 4-col ΓëÑ768px */
+/* Stat grid — 2-col mobile, 4-col ΓëÑ768px */
 .an-stat-grid{
   display:grid;grid-template-columns:1fr 1fr;gap:10px;
 }
@@ -3398,7 +3398,7 @@ a{color:inherit;text-decoration:none;}
 }
 .sw-confirm-ok:hover{opacity:.88;}
 .sw-confirm-ok.danger{background:var(--sw-danger);}
-/* ΓöÇΓöÇ Home follow-up alerts ΓöÇΓöÇ */
+/* ── Home follow-up alerts ── */
 .sw-alert-block{
   background:var(--sw-accent-pale);
   border:1.5px solid var(--sw-border2);
@@ -3447,13 +3447,13 @@ a{color:inherit;text-decoration:none;}
 </style>
 
 <style>
-/* STAGING: Force users-list to single column ΓÇö live app makes it a grid at desktop */
+/* STAGING: Force users-list to single column — live app makes it a grid at desktop */
 @media(min-width:768px){
   #users-list{ display:block !important; grid-template-columns:unset !important; gap:0 !important; }
 }
 </style>
 <style>
-/* STAGING: Home screen 2-col bottom row ΓÇö Alerts | Todo */
+/* STAGING: Home screen 2-col bottom row — Alerts | Todo */
 .sw-home-bottom-row{
   display:flex;
   flex-direction:column;
@@ -3586,6 +3586,7 @@ a{color:inherit;text-decoration:none;}
     <div class="drawer-divider"></div>
     <div class="drawer-section-label">Admin</div>
     <div class="drawer-item" id="drawer-users-item" style="display:none" onclick="swank.showScreen('users');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Manage Users</div>
+    <div class="drawer-item" onclick="swank.showScreen('analytics');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Analytics</div>
     <div class="drawer-item" onclick="swank.showScreen('settings');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Settings</div>
     <div class="drawer-item" onclick="swank.showScreen('about');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>About SWANK</div>
   </div>
@@ -3629,6 +3630,7 @@ a{color:inherit;text-decoration:none;}
     <div class="sw-sidebar-divider"></div>
     <div class="sw-sidebar-section-label">Admin</div>
     <div class="sw-sidebar-item" data-screen="users" id="sw-sidebar-users-item" onclick="swank.showScreen('users')" style="display:none"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Manage Users</div>
+    <div class="sw-sidebar-item" data-screen="analytics" onclick="swank.showScreen('analytics')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Analytics</div>
     <div class="sw-sidebar-item" data-screen="settings" onclick="swank.showScreen('settings')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Settings</div>
     <div class="sw-sidebar-item" data-screen="about" onclick="swank.showScreen('about')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>About</div>
   </div>
@@ -3657,10 +3659,10 @@ a{color:inherit;text-decoration:none;}
     <!-- ── Main content below hero ── -->
     <div class="sw-dash-body">
 
-    <!-- ΓöÇΓöÇ Main content below hero ΓöÇΓöÇ -->
+    <!-- ── Main content below hero ── -->
     <div class="sw-dash-body">
 
-      <!-- ΓöÇΓöÇ Action Cards ΓöÇΓöÇ -->
+      <!-- ── Action Cards ── -->
       <div class="sw-dash-cards">
         <div class="sw-action-card" onclick="swank.showScreen('furnishing')">
           <div class="sw-action-left">
@@ -3708,7 +3710,7 @@ a{color:inherit;text-decoration:none;}
               <span class="sw-todo-count" id="sw-todo-count"></span>
             </div>
             <div class="sw-todo-list sw-todo-dash-list" id="sw-todo-list">
-              <div class="sw-todo-empty">Loading tasksΓÇª</div>
+              <div class="sw-todo-empty">Loading tasks…</div>
             </div>
             <div id="sw-todo-dash-empty" style="display:none">
               <div class="sw-todo-empty-cta">
@@ -3749,15 +3751,27 @@ a{color:inherit;text-decoration:none;}
 
 
 
+<section id="screen-measurements" class="screen">
+  <div class="screen-scroll">
+    <div class="inner-header">
+      <button class="inner-back" onclick="swank.showScreen('furnishing')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
+      <h2 class="inner-title">Measurements</h2>
+    </div>
+    <div id="meas-content">
+      <div class="loading-state"><div class="spinner-ring"></div><p>Loading measurements…</p></div>
+    </div>
+  </div>
+</section>
+
 
 
 <!-- STAGING: Projects CSS -->
 <style>
-/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+/* ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬
    STAGING: Projects Module CSS
-ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
 
-/* ΓöÇΓöÇ Project List Screen ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+/* ── Project List Screen ─────────────────────────────── */
 .proj-toolbar{
   display:flex;align-items:center;gap:10px;
   padding:12px 16px;border-bottom:1px solid var(--sw-border);
@@ -3808,7 +3822,7 @@ a{color:inherit;text-decoration:none;}
 .proj-empty svg{opacity:.3;margin-bottom:12px;}
 .proj-empty p{font-size:14px;margin:0 0 16px;}
 
-/* ΓöÇΓöÇ Project Detail Screen ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+/* ── Project Detail Screen ──────────────────────────── */
 .proj-detail-header{
   display:flex;align-items:center;gap:10px;
   padding:12px 16px;border-bottom:1px solid var(--sw-border);
@@ -3832,7 +3846,7 @@ a{color:inherit;text-decoration:none;}
 .proj-field-value{font-size:13px;color:var(--sw-txt);font-weight:500;}
 .proj-field-value.empty{color:var(--sw-txt4);font-style:italic;font-weight:400;}
 
-/* ΓöÇΓöÇ Rooms section ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+/* ── Rooms section ──────────────────────────────────── */
 .proj-rooms-list{display:flex;flex-direction:column;gap:8px;}
 .proj-room-card{
   background:var(--sw-surface2);border:1px solid var(--sw-border);
@@ -3851,7 +3865,7 @@ a{color:inherit;text-decoration:none;}
   background:none;border:none;cursor:pointer;font-weight:600;
 }
 
-/* ΓöÇΓöÇ Fabric selection rows ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+/* ── Fabric selection rows ──────────────────────────── */
 .proj-sel-row{
   padding:8px 0;border-bottom:1px solid var(--sw-border2);
   display:flex;align-items:flex-start;gap:8px;
@@ -3873,7 +3887,7 @@ a{color:inherit;text-decoration:none;}
   cursor:pointer;font-weight:600;
 }
 
-/* ΓöÇΓöÇ Fabric Picker Overlay ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+/* ── Fabric Picker Overlay ──────────────────────────── */
 .proj-picker-overlay{
   display:none;position:fixed;inset:0;z-index:3000;
   background:rgba(58,45,40,.45);align-items:flex-end;justify-content:center;
@@ -3929,7 +3943,7 @@ a{color:inherit;text-decoration:none;}
   background:none;color:var(--sw-txt);font-size:13px;cursor:pointer;
 }
 
-/* ΓöÇΓöÇ Add Room Overlay ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+/* ── Add Room Overlay ───────────────────────────────── */
 .proj-room-overlay{
   display:none;position:fixed;inset:0;z-index:3000;
   background:rgba(58,45,40,.45);align-items:center;justify-content:center;
@@ -3961,7 +3975,7 @@ a{color:inherit;text-decoration:none;}
   border-top:1px solid var(--sw-border);padding-top:12px;margin-top:4px;
 }
 
-/* ΓöÇΓöÇ New / Edit Project Form ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+/* ── New / Edit Project Form ────────────────────────── */
 .proj-form-overlay{
   display:none;position:fixed;inset:0;z-index:3000;
   background:rgba(58,45,40,.45);align-items:flex-end;justify-content:center;
@@ -4011,7 +4025,7 @@ a{color:inherit;text-decoration:none;}
   background:none;color:var(--sw-txt);font-size:13px;cursor:pointer;
 }
 
-/* ΓöÇΓöÇ Status tabs ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+/* ── Status tabs ────────────────────────────────────── */
 .proj-status-bar{display:flex;gap:8px;padding:12px 16px;flex-wrap:wrap;}
 .proj-status-tab{
   padding:5px 12px;border-radius:100px;font-size:12px;font-weight:600;
@@ -4020,7 +4034,7 @@ a{color:inherit;text-decoration:none;}
 }
 .proj-status-tab.active{background:var(--sw-accent);border-color:var(--sw-accent);color:#fff;}
 
-/* ΓöÇΓöÇ Desktop responsive ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+/* ── Desktop responsive ─────────────────────────────── */
 @media(min-width:768px){
   .proj-field-grid{grid-template-columns:1fr 1fr 1fr;}
   .proj-form-row{grid-template-columns:1fr 1fr 1fr;}
@@ -4041,14 +4055,14 @@ a{color:inherit;text-decoration:none;}
 </style>
 
 <!-- STAGING: Projects Screens -->
-<!-- ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ PROJECTS LIST SCREEN ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ -->
+<!-- ╬╬╬╬╬╬╬╬ PROJECTS LIST SCREEN ╬╬╬╬╬╬╬╬ -->
 <section id="screen-projects" class="screen">
   <div class="screen-scroll">
 
     <div class="proj-toolbar">
       <div class="proj-search-wrap">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="text" id="proj-search" placeholder="Search projectsΓÇª" oninput="swankProjects.search(this.value)" autocomplete="off">
+        <input type="text" id="proj-search" placeholder="Search projects…" oninput="swankProjects.search(this.value)" autocomplete="off">
       </div>
       <button class="btn-accent" style="padding:9px 14px;font-size:12px;white-space:nowrap" onclick="swankProjects.newProject()">+ New</button>
     </div>
@@ -4061,13 +4075,13 @@ a{color:inherit;text-decoration:none;}
     </div>
 
     <div id="proj-list" class="proj-list">
-      <div class="loading-state"><div class="spinner-ring"></div><p>Loading projectsΓÇª</p></div>
+      <div class="loading-state"><div class="spinner-ring"></div><p>Loading projects…</p></div>
     </div>
 
   </div>
 </section>
 
-<!-- ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ PROJECT DETAIL SCREEN ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ -->
+<!-- ╬╬╬╬╬╬╬╬ PROJECT DETAIL SCREEN ╬╬╬╬╬╬╬╬ -->
 <section id="screen-project-detail" class="screen">
   <div class="screen-scroll">
 
@@ -4082,13 +4096,13 @@ a{color:inherit;text-decoration:none;}
     </div>
 
     <div class="proj-detail-body" id="proj-detail-body">
-      <div class="loading-state"><div class="spinner-ring"></div><p>LoadingΓÇª</p></div>
+      <div class="loading-state"><div class="spinner-ring"></div><p>Loading…</p></div>
     </div>
 
   </div>
 </section>
 
-<!-- ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ NEW / EDIT PROJECT OVERLAY ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ -->
+<!-- ╬╬╬╬╬╬╬╬ NEW / EDIT PROJECT OVERLAY ╬╬╬╬╬╬╬╬ -->
 <div id="proj-form-overlay" class="proj-form-overlay" onclick="if(event.target===this)swankProjects.closeForm()">
   <div class="proj-form-sheet">
     <div class="proj-form-header">
@@ -4224,7 +4238,7 @@ a{color:inherit;text-decoration:none;}
   </div>
 </div>
 
-<!-- ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ ADD ROOM OVERLAY ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ -->
+<!-- ╬╬╬╬╬╬╬╬ ADD ROOM OVERLAY ╬╬╬╬╬╬╬╬ -->
 <div id="proj-room-overlay" class="proj-room-overlay" onclick="if(event.target===this)swankProjects.closeRoomOverlay()">
   <div class="proj-room-sheet">
     <div class="proj-room-sheet-header">
@@ -4237,7 +4251,7 @@ a{color:inherit;text-decoration:none;}
       <div class="proj-picker-label">Select from master list</div>
       <div id="proj-room-master-list" class="proj-room-master-list"></div>
       <div class="proj-divider-label">or add a custom room</div>
-      <input type="text" id="proj-room-custom-input" class="proj-picker-input" placeholder="Custom room nameΓÇª" autocomplete="off">
+      <input type="text" id="proj-room-custom-input" class="proj-picker-input" placeholder="Custom room name…" autocomplete="off">
       <div style="display:flex;gap:10px">
         <button class="proj-form-cancel" style="flex:1" onclick="swankProjects.closeRoomOverlay()">Cancel</button>
         <button class="proj-form-save" style="flex:1" onclick="swankProjects.saveRoom()">Add Room</button>
@@ -4246,7 +4260,7 @@ a{color:inherit;text-decoration:none;}
   </div>
 </div>
 
-<!-- ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ FABRIC PICKER OVERLAY ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ -->
+<!-- ╬╬╬╬╬╬╬╬ FABRIC PICKER OVERLAY ╬╬╬╬╬╬╬╬ -->
 <div id="proj-picker-overlay" class="proj-picker-overlay" onclick="if(event.target===this)swankProjects.closePicker()">
   <div class="proj-picker-sheet">
     <div class="proj-picker-header">
@@ -4347,15 +4361,15 @@ a{color:inherit;text-decoration:none;}
         <div class="proj-mrp-display">
           <div>
             <div class="proj-mrp-label">MRP (excl. GST)</div>
-            <div class="proj-mrp-value" id="proj-picker-mrp-val">ΓÇö</div>
+            <div class="proj-mrp-value" id="proj-picker-mrp-val">—</div>
           </div>
           <div>
             <div class="proj-mrp-label">GST</div>
-            <div class="proj-mrp-value" id="proj-picker-gst-val">ΓÇö</div>
+            <div class="proj-mrp-value" id="proj-picker-gst-val">—</div>
           </div>
           <div>
             <div class="proj-mrp-label">MRP incl. GST</div>
-            <div class="proj-mrp-value" id="proj-picker-mrp-incl-val">ΓÇö</div>
+            <div class="proj-mrp-value" id="proj-picker-mrp-incl-val">—</div>
           </div>
         </div>
       </div>
@@ -4402,7 +4416,7 @@ a{color:inherit;text-decoration:none;}
     <div class="search-wrapper" style="margin-bottom:12px">
       <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       <input type="text" id="cust-search-input" class="search-input"
-        placeholder="Search by name or mobileΓÇª"
+        placeholder="Search by name or mobile…"
         autocomplete="off" autocorrect="off" autocapitalize="none"
         oninput="swankCustomers.filterList(this.value)">
     </div>
@@ -4410,7 +4424,7 @@ a{color:inherit;text-decoration:none;}
     <!-- List -->
     <div id="cust-list-wrap">
       <div class="loading-state" id="cust-list-loading" style="display:none">
-        <div class="spinner-ring"></div><span>Loading customersΓÇª</span>
+        <div class="spinner-ring"></div><span>Loading customers…</span>
       </div>
       <div id="cust-list"></div>
       <div class="empty-state" id="cust-list-empty" style="display:none">
@@ -4467,7 +4481,7 @@ a{color:inherit;text-decoration:none;}
   </div>
 </section>
 
-<!-- ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ FURNISHING ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ -->
+<!-- ╬╬╬╬╬╬╬╬ FURNISHING ╬╬╬╬╬╬╬╬ -->
 <section id="screen-furnishing" class="screen">
   <div class="screen-scroll sw-dash-scroll">
     <div class="sw-hero" id="sw-furn-hero">
@@ -4531,7 +4545,7 @@ a{color:inherit;text-decoration:none;}
       <button class="fo-select-btn" onclick="furnOrders.selectAllVisible()">Select All</button>
       <button class="fo-select-btn" onclick="furnOrders.clearSelection()">Clear</button>
       <button class="fo-select-btn danger" id="fo-bulk-del-btn" onclick="furnOrders.bulkDelete()" disabled style="opacity:.5">
-        ≡ƒùæ Delete Selected
+        Delete Selected
       </button>
       <button class="fo-select-btn" onclick="furnOrders.toggleSelectMode()">Γ£ò Cancel</button>
     </div>
@@ -4551,7 +4565,7 @@ a{color:inherit;text-decoration:none;}
       <div class="search-wrapper" style="margin-bottom:0;flex:1">
         <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         <input type="text" id="fo-search" class="search-input"
-          placeholder="Search customer, company, collectionΓÇª"
+          placeholder="Search customer, company, collection…"
           autocomplete="off" autocorrect="off" autocapitalize="none"
           oninput="furnOrders.filter(this.value)">
         <button class="search-clear" id="fo-search-clear"
@@ -4595,7 +4609,7 @@ a{color:inherit;text-decoration:none;}
       </div>
       <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;align-items:flex-end">
         <div style="flex:1;min-width:120px">
-          <div class="fo-label" style="margin-bottom:4px">Date Ordered ΓÇö From</div>
+          <div class="fo-label" style="margin-bottom:4px">Date Ordered — From</div>
           <input type="date" id="fo-date-from" class="fo-input" style="padding:8px 10px;font-size:13px" onchange="furnOrders._onFilterChange()">
         </div>
         <div style="flex:1;min-width:120px">
@@ -4608,7 +4622,7 @@ a{color:inherit;text-decoration:none;}
 
     <!-- Loading -->
     <div id="fo-loading" class="loading-state" style="display:none">
-      <div class="spinner-ring"></div><span>Loading ordersΓÇª</span>
+      <div class="spinner-ring"></div><span>Loading orders…</span>
     </div>
 
     <!-- Fabric tab -->
@@ -4700,7 +4714,7 @@ a{color:inherit;text-decoration:none;}
         <div class="fo-field fo-autocomplete">
           <label class="fo-label">Customer Name / Mobile *</label>
           <input type="text" id="fo-cust-search" class="fo-input"
-            placeholder="Type name or mobile to searchΓÇª"
+            placeholder="Type name or mobile to search…"
             autocomplete="off" autocorrect="off"
             oninput="furnOrders.searchCustomer(this.value)"
             onfocus="furnOrders.searchCustomer(this.value)">
@@ -4722,7 +4736,7 @@ a{color:inherit;text-decoration:none;}
           <div class="fo-field">
             <label class="fo-label">Company</label>
             <div style="position:relative">
-              <input type="text" id="fo-company-text" class="fo-input" placeholder="Search companyΓÇª"
+              <input type="text" id="fo-company-text" class="fo-input" placeholder="Search company…"
                 autocomplete="off" readonly onclick="furnOrders.openCompanyPicker()" style="cursor:pointer">
             </div>
             <div id="fo-company-list" style="display:none;border:1.5px solid var(--sw-border);border-radius:var(--sw-r-md);background:var(--sw-surface);max-height:160px;overflow-y:auto;margin-top:4px;box-shadow:var(--sw-shd-md)"></div>
@@ -4769,7 +4783,7 @@ a{color:inherit;text-decoration:none;}
             <div class="fo-field" style="flex:2">
               <label class="fo-label">Blind Type</label>
               <select id="fo-blind-type" class="fo-input">
-                <option value="">Select typeΓÇª</option>
+                <option value="">Select type…</option>
                 <option>Roller</option><option>Zebra</option><option>Roman</option>
                 <option>Venetian</option><option>Vertical</option><option>Honeycomb</option>
                 <option>Wooden</option><option>Skylight</option><option>Other</option>
@@ -4790,13 +4804,13 @@ a{color:inherit;text-decoration:none;}
             <div class="fo-field">
               <label class="fo-label">Control Side</label>
               <select id="fo-control-side" class="fo-input">
-                <option value="">SelectΓÇª</option><option>Left</option><option>Right</option>
+                <option value="">Select…</option><option>Left</option><option>Right</option>
               </select>
             </div>
             <div class="fo-field">
               <label class="fo-label">Operation</label>
               <select id="fo-operation" class="fo-input">
-                <option value="">SelectΓÇª</option><option>Manual</option><option>Motorized</option>
+                <option value="">Select…</option><option>Manual</option><option>Motorized</option>
               </select>
             </div>
           </div>
@@ -4883,7 +4897,7 @@ a{color:inherit;text-decoration:none;}
     <div id="an-content">
       <div class="an-loading">
         <div class="spinner-ring" style="width:18px;height:18px;border-width:2px"></div>
-        Loading analyticsΓÇª
+        Loading analytics…
       </div>
     </div>
 
@@ -4999,7 +5013,7 @@ a{color:inherit;text-decoration:none;}
   </div>
 </section>
 
-<!-- ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ USER MANAGEMENT ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ -->
+<!-- ╬╬╬╬╬╬╬╬ USER MANAGEMENT ╬╬╬╬╬╬╬╬ -->
 <section id="screen-users" class="screen">
   <div class="screen-scroll">
 
@@ -5011,7 +5025,7 @@ a{color:inherit;text-decoration:none;}
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           Add User
         </button>
-        <button class="inner-action" onclick="swank.loadUsers()">Γå║</button>
+        <button class="inner-action" onclick="swank.loadUsers()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></button>
       </div>
     </div>
 
@@ -5022,7 +5036,7 @@ a{color:inherit;text-decoration:none;}
     <div class="ul-search-wrap">
       <svg class="ul-search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       <input id="users-search" class="ul-search-input" type="text"
-        placeholder="Search name, username, mobile, emp codeΓÇª"
+        placeholder="Search name, username, mobile, emp code…"
         oninput="swank.onUserSearch(this.value)"
         autocomplete="off" autocorrect="off" autocapitalize="none">
       <button id="users-search-clear" class="ul-search-clear" style="display:none"
@@ -5044,7 +5058,7 @@ a{color:inherit;text-decoration:none;}
 
     <!-- User list -->
     <div id="users-list" class="ul-list">
-      <div class="loading-state"><div class="spinner-ring"></div><p>Loading usersΓÇª</p></div>
+      <div class="loading-state"><div class="spinner-ring"></div><p>Loading users…</p></div>
     </div>
 
   </div>
@@ -5416,7 +5430,7 @@ a{color:inherit;text-decoration:none;}
 <div style="position:fixed;top:0;left:50%;transform:translateX(-50%);background:#2A5AA0;color:#fff;font-size:9px;font-weight:700;letter-spacing:.12em;padding:2px 10px;border-radius:0 0 6px 6px;z-index:9998;pointer-events:none">STAGING</div>
 
 
-<!-- ΓòÉΓòÉ ADD USER MODAL ΓòÉΓòÉ -->
+<!-- ╬╬ ADD USER MODAL ╬╬ -->
 <div id="add-user-modal" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:2000;background:rgba(58,45,40,.45);align-items:center;justify-content:center;padding:20px">
   <div style="background:var(--sw-surface);border-radius:var(--sw-r-xl);padding:0;width:100%;max-width:420px;box-shadow:var(--sw-shd-xl);overflow:hidden;max-height:90vh;display:flex;flex-direction:column">
     <div style="padding:20px 20px 16px;border-bottom:1px solid var(--sw-border);display:flex;align-items:center;justify-content:space-between;flex-shrink:0">
@@ -5469,8 +5483,69 @@ a{color:inherit;text-decoration:none;}
   </div>
 </div>
 
-<!-- ΓòÉΓòÉ USER DETAIL / EDIT OVERLAY ΓòÉΓòÉ -->
+<!-- ╬╬ USER DETAIL / EDIT OVERLAY ╬╬ -->
 <div id="user-detail-overlay" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:2000;background:rgba(58,45,40,.45);align-items:flex-end;justify-content:center;padding:0">
+  <div class="sw-user-panel" id="user-detail-panel">
+    <div class="sw-user-panel-header">
+      <div class="sw-user-panel-avatar" id="ud-avatar">?</div>
+      <div style="flex:1;min-width:0">
+        <div style="font-size:16px;font-weight:700;color:var(--sw-txt)" id="ud-name">—</div>
+        <div style="font-size:12px;color:var(--sw-txt3);margin-top:2px" id="ud-role">—</div>
+      </div>
+      <button class="inner-action" onclick="swank.closeUserDetail()" style="flex-shrink:0">✕</button>
+    </div>
+    <div class="sw-user-panel-body" id="ud-body">
+      <!-- view mode -->
+      <div id="ud-view">
+        <div class="sw-user-panel-row"><span class="sw-user-panel-lbl">Username</span><span class="sw-user-panel-val" id="ud-username">—</span></div>
+        <div class="sw-user-panel-row"><span class="sw-user-panel-lbl">Mobile</span><span class="sw-user-panel-val" id="ud-mobile">—</span></div>
+        <div class="sw-user-panel-row"><span class="sw-user-panel-lbl">Email</span><span class="sw-user-panel-val" id="ud-email">—</span></div>
+        <div class="sw-user-panel-row"><span class="sw-user-panel-lbl">Emp Code</span><span class="sw-user-panel-val" id="ud-empcode">—</span></div>
+        <div class="sw-user-panel-row"><span class="sw-user-panel-lbl">Status</span><span class="sw-user-panel-val" id="ud-status">—</span></div>
+        <div class="sw-user-panel-row"><span class="sw-user-panel-lbl">Device</span><span class="sw-user-panel-val" id="ud-device">—</span></div>
+      </div>
+      <!-- edit mode -->
+      <div id="ud-edit" style="display:none">
+        <div class="sw-user-edit-form">
+          <div class="sw-form-field"><label class="sw-form-label">Full Name</label><input class="sw-user-edit-input" id="ud-edit-name" type="text" autocomplete="off"></div>
+          <div class="sw-form-field"><label class="sw-form-label">Mobile</label><input class="sw-user-edit-input" id="ud-edit-mobile" type="tel" autocomplete="off"></div>
+          <div class="sw-form-field"><label class="sw-form-label">Email</label><input class="sw-user-edit-input" id="ud-edit-email" type="email" autocomplete="off"></div>
+          <div class="sw-form-field"><label class="sw-form-label">Emp Code</label><input class="sw-user-edit-input" id="ud-edit-empcode" type="text" autocomplete="off"></div>
+          <div class="sw-form-field"><label class="sw-form-label">New Password <span style="font-weight:400;text-transform:none">(leave blank to keep)</span></label><input class="sw-user-edit-input" id="ud-edit-password" type="password" autocomplete="new-password"></div>
+          <div class="sw-form-field"><label class="sw-form-label">Role</label>
+            <select class="sw-user-edit-input" id="ud-edit-role">
+              <option value="SALES">Sales</option>
+              <option value="MANAGER">Manager</option>
+              <option value="ADMIN">Admin</option>
+            </select>
+          </div>
+          <div class="sw-form-field"><label class="sw-form-label">Status</label>
+            <select class="sw-user-edit-input" id="ud-edit-status">
+              <option value="ACTIVE">Active</option>
+              <option value="SUSPENDED">Suspended</option>
+              <option value="PENDING">Pending</option>
+              <option value="REJECTED">Rejected</option>
+            </select>
+          </div>
+          <div id="ud-edit-error" style="display:none;color:var(--sw-danger);font-size:13px;padding:4px 0"></div>
+        </div>
+      </div>
+    </div>
+    <div class="sw-user-panel-footer">
+      <!-- view mode buttons -->
+      <div id="ud-footer-view" style="display:flex;gap:8px;flex-wrap:wrap;width:100%">
+        <button class="btn-accent" style="flex:1" onclick="swank.openEditUser()">Edit</button>
+        <button class="inner-action" id="ud-btn-suspend" onclick="swank.toggleSuspend()">Suspend</button>
+        <button class="inner-action" style="color:var(--sw-danger)" onclick="swank.deleteUserFromDetail()">Delete</button>
+        <button class="inner-action" id="ud-btn-device" onclick="swank.resetDevice()" style="display:none">Reset Device</button>
+      </div>
+      <!-- edit mode buttons -->
+      <div id="ud-footer-edit" style="display:none;gap:8px;width:100%;display:none">
+        <button class="btn-accent" style="flex:1" onclick="swank.saveUserEdit()">Save</button>
+        <button class="inner-action" onclick="swank.cancelUserEdit()">Cancel</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 </div><!-- #app -->
@@ -5874,6 +5949,7 @@ var swank = (function(){
     _renderRecentChips();
     _renderFavChips();
     _loadTasks();
+    try { _loadHomeAlerts(); } catch(e){ console.warn('[HomeAlerts]',e); }
     if(S.session && (S.session.role==='ADMIN'||S.session.role==='MANAGER')){
       var di=document.getElementById('drawer-users-item');
       if(di) di.style.display='flex';
@@ -6027,7 +6103,7 @@ var swank = (function(){
     if(name==='history')   _renderHistoryScreen();
     if(name==='favorites') _renderFavoritesScreen();
     if(name==='users')     loadUsers();
-    // Sofa module ΓÇö init on landing; sub-screens handled by sfShowPrices/sfShowEstimates/sfShowOrders
+    // Sofa module — init on landing; sub-screens handled by sfShowPrices/sfShowEstimates/sfShowOrders
     if(name==='sofa') { try { if(typeof sfInit==='function') sfInit(); } catch(e){ console.warn('[SofaModule]',e); } }
     // Furnishing module
     if(name==='furnishing') { try { _loadFurnishingHero(); } catch(e){ console.warn('[FurnHero]',e); } }
@@ -6058,13 +6134,13 @@ var swank = (function(){
     }
   }
 
-  /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+  /* ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬
      USER MANAGEMENT
-  ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+  ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
   function loadUsers(){
     if(!S.session||(S.session.role!=='ADMIN'&&S.session.role!=='MANAGER')) return;
     var container=document.getElementById('users-list');
-    if(container) container.innerHTML='<div class="loading-state"><div class="spinner-ring"></div><p>Loading usersΓÇª</p></div>';
+    if(container) container.innerHTML='<div class="loading-state"><div class="spinner-ring"></div><p>Loading users…</p></div>';
     _api('GET', '/api/users')
       .then(function(r){
         if(r&&r.success){
@@ -6081,7 +6157,7 @@ var swank = (function(){
       .catch(function(err){ console.error(err); })
   }
 
-  /* ΓöÇΓöÇ Stats bar: tappable counts per status ΓöÇΓöÇ */
+  /* ── Stats bar: tappable counts per status ── */
   function _renderStatsBar(){
     var bar = document.getElementById('users-stats-bar');
     if(!bar) return;
@@ -6145,7 +6221,7 @@ var swank = (function(){
     _renderUsers();
   }
 
-  /* ΓöÇΓöÇ Live search ΓöÇΓöÇ */
+  /* ── Live search ── */
   function onUserSearch(val){
     S.userSearch = (val||'').trim().toLowerCase();
     var clearBtn = document.getElementById('users-search-clear');
@@ -6161,7 +6237,7 @@ var swank = (function(){
     if(si) si.focus();
   }
 
-  /* ΓöÇΓöÇ Highlight matched text ΓöÇΓöÇ */
+  /* ── Highlight matched text ── */
   function _highlight(text, query){
     if(!query) return _escHtml(text);
     var esc = _escHtml(text);
@@ -6169,7 +6245,7 @@ var swank = (function(){
     return esc.replace(new RegExp('('+escQ+')', 'gi'), '<span class="ul-highlight">$1</span>');
   }
 
-  /* ΓöÇΓöÇ Sort helper: AΓåÆZ by fullName then username ΓöÇΓöÇ */
+  /* ── Sort helper: A→Z by fullName then username ── */
   function _sortAZ(arr){
     return arr.slice().sort(function(a,b){
       var na = (a.fullName||a.username||'').toLowerCase();
@@ -6178,7 +6254,7 @@ var swank = (function(){
     });
   }
 
-  /* ΓöÇΓöÇ Build one compact row HTML string ΓöÇΓöÇ */
+  /* ── Build one compact row HTML string ── */
   function _buildUserRow(u, q, showRoleLbl){
     var safeU       = String(u.username).replace(/[^A-Za-z0-9_-]/g,'');
     var displayName = _highlight(u.fullName||u.username, q);
@@ -6201,8 +6277,8 @@ var swank = (function(){
       + '<div class="ul-avatar '+avatarCls+'">'+((u.fullName||u.username).charAt(0).toUpperCase())+'</div>'
       + '<div class="ul-body">'
       +   '<div class="ul-name">'+displayName+'</div>'
-      +   '<div class="ul-meta">'+subParts.join(' ┬╖ ')
-      +     (showRoleLbl ? '<span style="color:var(--sw-txt4)"> ┬╖ '+roleLbl+'</span>' : '')
+      +   '<div class="ul-meta">'+subParts.join(' · ')
+      +     (showRoleLbl ? '<span style="color:var(--sw-txt4)"> · '+roleLbl+'</span>' : '')
       +   '</div>'
       + '</div>'
       + '<div class="ul-right">'
@@ -6212,7 +6288,7 @@ var swank = (function(){
       + '</div>';
   }
 
-  /* ΓöÇΓöÇ Role group section header ΓöÇΓöÇ */
+  /* ── Role group section header ── */
   function _buildGroupHeader(label, icon, count){
     return '<div class="ul-group-header">'
       + '<span class="ul-group-label">'+icon+' '+label+'</span>'
@@ -6220,7 +6296,7 @@ var swank = (function(){
       + '</div>';
   }
 
-  /* ΓöÇΓöÇ Main render: filter + search + sort + group ΓöÇΓöÇ */
+  /* ── Main render: filter + search + sort + group ── */
   function _renderUsers(){
     var container = document.getElementById('users-list');
     if(!container) return;
@@ -6250,7 +6326,7 @@ var swank = (function(){
       if(q || filter!=='ALL'){
         rcEl.textContent = list.length + ' result'+(list.length!==1?'s':'')
           +(q?' for "'+q+'"':'')
-          +(filter!=='ALL'?' ┬╖ '+filter:'');
+          +(filter!=='ALL'?' · '+filter:'');
         rcEl.style.display='block';
       } else {
         rcEl.style.display='none';
@@ -6272,9 +6348,9 @@ var swank = (function(){
 
     if(useGroups){
       var groups = [
-        { key:'ADMIN',   label:'Admins',   icon:'≡ƒöæ' },
-        { key:'MANAGER', label:'Managers', icon:'≡ƒæö' },
-        { key:'SALES',   label:'Sales',    icon:'≡ƒæñ' }
+        { key:'ADMIN',   label:'Admins',   icon:'' },
+        { key:'MANAGER', label:'Managers', icon:'' },
+        { key:'SALES',   label:'Sales',    icon:'' }
       ];
       groups.forEach(function(g){
         var members = _sortAZ(list.filter(function(u){ return u.role===g.key; }));
@@ -6285,7 +6361,7 @@ var swank = (function(){
         html += '</div>';
       });
     } else {
-      // Flat list ΓÇö sort AΓåÆZ, show role label since groups not visible
+      // Flat list — sort A→Z, show role label since groups not visible
       _sortAZ(list).forEach(function(u){ html += _buildUserRow(u, q, true); });
     }
 
@@ -13061,7 +13137,7 @@ function sfBuildPDF(est) {
 <script>
 
 /* ============================================================
-   SWANK CUSTOMERS ΓÇö SwankCustomers.html
+   SWANK CUSTOMERS — SwankCustomers.html
    Customer profile overlay + customer management screen.
    Exposes: swankCustomers object (global)
 ============================================================ */
@@ -13075,22 +13151,22 @@ var swankCustomers = (function(){
     editingProject: null   // null = new project, else project object
   };
 
-  /* ΓöÇΓöÇ Helpers ΓöÇΓöÇ */
+  /* ── Helpers ── */
   function _el(id)   { return document.getElementById(id); }
   function _esc(s)   { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
   function _show(id) { var e=_el(id); if(e) e.style.display=''; }
   function _hide(id) { var e=_el(id); if(e) e.style.display='none'; }
   function _setText(id,v) { var e=_el(id); if(e) e.textContent=v; }
 
-  /* Date formatter ΓÇö accepts YYYY-MM-DD, DD MMM YYYY, ISO strings ΓåÆ DD-MMM-YYYY */
+  /* Date formatter — accepts YYYY-MM-DD, DD MMM YYYY, ISO strings → DD-MMM-YYYY */
   var _MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   function _fmtDate(d) {
-    if (!d) return 'ΓÇö';
+    if (!d) return '—';
     var s = String(d).trim();
     var m = s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
     if (m) return String(+m[3]).padStart(2,'0')+'-'+_MON[+m[2]-1]+'-'+m[1];
     var MNAMES = {jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11};
-    // DD-MMM-YYYY already ΓÇö return as-is
+    // DD-MMM-YYYY already — return as-is
     if (/^\d{2}-[A-Za-z]{3}-\d{4}$/.test(s)) return s;
     // JS Date.toString(): "Wed Jun 17 2026 05:30:00 GMT+0530..."
     m = s.match(/([A-Za-z]{3})\s+(\d{1,2})\s+(\d{4})/);
@@ -13099,9 +13175,9 @@ var swankCustomers = (function(){
     if (m) { var mo=MNAMES[m[2].substring(0,3).toLowerCase()]; if(mo!==undefined) return String(+m[1]).padStart(2,'0')+'-'+_MON[mo]+'-'+m[3]; }
     m = s.match(/([A-Za-z]{3,9})\s+(\d{1,2}),?\s+(\d{4})/);
     if (m) { var mo2=MNAMES[m[1].substring(0,3).toLowerCase()]; if(mo2!==undefined) return String(+m[2]).padStart(2,'0')+'-'+_MON[mo2]+'-'+m[3]; }
-    // ISO string ΓÇö take date part only
+    // ISO string — take date part only
     if (s.length >= 10 && s[4]==='-') return _fmtDate(s.substring(0,10));
-    return s.substring(0,10) || 'ΓÇö';
+    return s.substring(0,10) || '—';
   }
 
   function _statusBadge(status) {
@@ -13112,12 +13188,12 @@ var swankCustomers = (function(){
       'FINAL':'cp-badge-final','Final':'cp-badge-final','Confirmed':'cp-badge-final'
     };
     var cls = map[status] || 'cp-badge-draft';
-    return '<span class="cp-order-badge '+cls+'">'+_esc(status||'ΓÇö')+'</span>';
+    return '<span class="cp-order-badge '+cls+'">'+_esc(status||'—')+'</span>';
   }
 
-  /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+  /* ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬
      CUSTOMER LIST (screen-customers)
-  ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+  ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
   function load() {
     _show('cust-list-loading');
     _hide('cust-list-empty');
@@ -13157,8 +13233,8 @@ var swankCustomers = (function(){
       return '<div class="est-list-card" style="cursor:pointer" onclick="swankCustomers.openProfile(\''+safeId+'\')">'
         + '<div class="est-list-card-top">'
         + '<div class="est-list-card-left">'
-        + '<div class="est-list-card-cust">'+_esc(c.name||'ΓÇö')+'</div>'
-        + '<div class="est-list-card-meta">'+_esc(c.mobile||'')+(c.address?' ┬╖ '+_esc(c.address.substring(0,40)):'')+'</div>'
+        + '<div class="est-list-card-cust">'+_esc(c.name||'—')+'</div>'
+        + '<div class="est-list-card-meta">'+_esc(c.mobile||'')+(c.address?' · '+_esc(c.address.substring(0,40)):'')+'</div>'
         + '</div>'
         + '<div class="est-list-card-right">'
         + '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--sw-txt3)"><polyline points="9 18 15 12 9 6"/></svg>'
@@ -13177,14 +13253,14 @@ var swankCustomers = (function(){
     _renderList(filtered);
   }
 
-  /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+  /* ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬
      PROFILE OVERLAY
-  ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+  ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
   function openProfile(customerId) {
     C.currentId = customerId;
     _setText('cp-header-name', '');
     var body = _el('cp-body');
-    if (body) body.innerHTML = '<div class="cp-loading"><div class="spinner-ring" style="width:18px;height:18px;border-width:2px"></div>LoadingΓÇª</div>';
+    if (body) body.innerHTML = '<div class="cp-loading"><div class="spinner-ring" style="width:18px;height:18px;border-width:2px"></div>Loading…</div>';
     _el('customer-profile-overlay').classList.add('active');
 
     _api('GET', '/api/customers/' + encodeURIComponent(id))
@@ -13216,15 +13292,15 @@ var swankCustomers = (function(){
     var c = data.customer;
     var html = '';
 
-    /* 1 ΓÇö Customer info card */
+    /* 1 — Customer info card */
     html += '<div class="cp-info-card" id="cp-info-view">'
-      + '<div class="cp-info-row"><div class="cp-info-label">Name</div><div class="cp-info-value">'+_esc(c.name||'ΓÇö')+'</div></div>'
-      + '<div class="cp-info-row"><div class="cp-info-label">Mobile</div><div class="cp-info-value cp-info-mobile">'+_esc(c.mobile||'ΓÇö')+'</div></div>'
-      + '<div class="cp-info-row"><div class="cp-info-label">Address</div><div class="cp-info-value">'+_esc(c.address||'ΓÇö')+'</div></div>'
-      + '<div class="cp-info-row"><div class="cp-info-label">Remarks</div><div class="cp-info-value">'+_esc(c.remarks||'ΓÇö')+'</div></div>'
+      + '<div class="cp-info-row"><div class="cp-info-label">Name</div><div class="cp-info-value">'+_esc(c.name||'—')+'</div></div>'
+      + '<div class="cp-info-row"><div class="cp-info-label">Mobile</div><div class="cp-info-value cp-info-mobile">'+_esc(c.mobile||'—')+'</div></div>'
+      + '<div class="cp-info-row"><div class="cp-info-label">Address</div><div class="cp-info-value">'+_esc(c.address||'—')+'</div></div>'
+      + '<div class="cp-info-row"><div class="cp-info-label">Remarks</div><div class="cp-info-value">'+_esc(c.remarks||'—')+'</div></div>'
       + '</div>';
 
-    /* 2 ΓÇö Furnishing Estimates */
+    /* 2 — Furnishing Estimates */
     var furnEsts = data.furnEsts || [];
     html += '<div class="cp-section">'
       + '<div class="cp-section-title">Furnishing Estimates <span class="cp-section-badge">'+furnEsts.length+'</span></div>';
@@ -13237,7 +13313,7 @@ var swankCustomers = (function(){
               +'<td style="white-space:nowrap">'+_esc(_fmtDate(e.date))+'</td>'
               +'<td style="white-space:nowrap">&#8377;'+_esc(String(e.grandTotal||0))+'</td>'
               +'<td>'+_statusBadge(e.orderStatus)+'</td>'
-              +'<td><button class="cp-table-open" onclick="swankCustomers._openFurnEst(\''+safeId+'\')">Open ΓåÆ</button></td>'
+              +'<td><button class="cp-table-open" onclick="swankCustomers._openFurnEst(\''+safeId+'\')">Open →</button></td>'
               +'</tr>';
           }).join('')
         + '</tbody></table></div>';
@@ -13246,13 +13322,13 @@ var swankCustomers = (function(){
     }
     html += '</div>';
 
-    /* 3 ΓÇö Furnishing Orders */
+    /* 3 — Furnishing Orders */
     var furnOrds = data.furnOrders || [];
     var fabricOrds  = furnOrds.filter(function(o){ return o.itemType === 'Fabric'; });
     var blindOrds   = furnOrds.filter(function(o){ return o.itemType === 'Blinds'; });
     html += '<div class="cp-section">'
       + '<div class="cp-section-title">Furnishing Orders'
-      + '<span class="cp-section-badge">Fabric '+fabricOrds.length+' ┬╖ Blinds '+blindOrds.length+'</span></div>';
+      + '<span class="cp-section-badge">Fabric '+fabricOrds.length+' · Blinds '+blindOrds.length+'</span></div>';
     if (furnOrds.length) {
       html += '<div style="overflow-x:auto"><table class="cp-table"><thead><tr><th>Order #</th><th>Type</th><th>Product</th><th>Qty</th><th>Status</th></tr></thead><tbody>'
         + furnOrds.map(function(o){
@@ -13270,7 +13346,7 @@ var swankCustomers = (function(){
     }
     html += '</div>';
 
-    /* 4 ΓÇö Sofa Estimates */
+    /* 4 — Sofa Estimates */
     var sofaEsts = data.sofaEsts || [];
     html += '<div class="cp-section">'
       + '<div class="cp-section-title">Sofa Estimates <span class="cp-section-badge">'+sofaEsts.length+'</span></div>';
@@ -13283,7 +13359,7 @@ var swankCustomers = (function(){
               +'<td style="white-space:nowrap">'+_esc(_fmtDate(e.date))+'</td>'
               +'<td style="white-space:nowrap">&#8377;'+_esc(String(e.grandTotal||0))+'</td>'
               +'<td>'+_statusBadge(e.status)+'</td>'
-              +'<td><button class="cp-table-open" onclick="swankCustomers._openSofaEst(\''+safeId+'\')">Open ΓåÆ</button></td>'
+              +'<td><button class="cp-table-open" onclick="swankCustomers._openSofaEst(\''+safeId+'\')">Open →</button></td>'
               +'</tr>';
           }).join('')
         + '</tbody></table></div>';
@@ -13292,7 +13368,7 @@ var swankCustomers = (function(){
     }
     html += '</div>';
 
-    /* 5 ΓÇö Sofa Orders */
+    /* 5 — Sofa Orders */
     var sofaOrds = data.sofaOrds || [];
     html += '<div class="cp-section">'
       + '<div class="cp-section-title">Sofa Orders <span class="cp-section-badge">'+sofaOrds.length+'</span></div>';
@@ -13305,7 +13381,7 @@ var swankCustomers = (function(){
               +'<td style="white-space:nowrap">'+_esc(_fmtDate(o.date))+'</td>'
               +'<td style="white-space:nowrap">&#8377;'+_esc(String(o.grandTotal||0))+'</td>'
               +'<td>'+_statusBadge(o.status)+'</td>'
-              +'<td><button class="cp-table-open" onclick="swankCustomers._openSofaOrd(\''+safeId+'\')">Open ΓåÆ</button></td>'
+              +'<td><button class="cp-table-open" onclick="swankCustomers._openSofaOrd(\''+safeId+'\')">Open →</button></td>'
               +'</tr>';
           }).join('')
         + '</tbody></table></div>';
@@ -13314,7 +13390,7 @@ var swankCustomers = (function(){
     }
     html += '</div>';
 
-    /* 6 ΓÇö Projects */
+    /* 6 — Projects */
     var projects = data.projects || [];
     html += '<div class="cp-section" id="cp-projects-section">'
       + '<div class="cp-section-title" style="display:flex;align-items:center;justify-content:space-between">'
@@ -13332,7 +13408,7 @@ var swankCustomers = (function(){
           + '<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px">'
           + '<div style="min-width:0">'
           + '<div class="cp-proj-name">'+_esc(p.projectName)+'</div>'
-          + '<div class="cp-proj-meta">'+_esc(p.projectType||'ΓÇö')+(p.siteAddress?' ┬╖ '+_esc(p.siteAddress):'')+'</div>'
+          + '<div class="cp-proj-meta">'+_esc(p.projectType||'—')+(p.siteAddress?' · '+_esc(p.siteAddress):'')+'</div>'
           + (p.archName?'<div class="cp-proj-meta" style="margin-top:2px">Arch: '+_esc(p.archName)+'</div>':'')
           + '</div>'
           + '<span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;white-space:nowrap;flex-shrink:0;background:'+statusColor+';color:var(--sw-bg)">'+_esc(p.status)+'</span>'
@@ -13348,7 +13424,7 @@ var swankCustomers = (function(){
     body.innerHTML = html;
   }
 
-  /* ΓöÇΓöÇ Open linked estimate / sofa records ΓöÇΓöÇ */
+  /* ── Open linked estimate / sofa records ── */
   function _openFurnEst(id) {
     closeProfile();
     try { swankEst.openDetail(id); } catch(e){ console.warn('[CustomerProfile] openDetail:', e); }
@@ -13374,9 +13450,9 @@ var swankCustomers = (function(){
     } catch(e){ console.warn('[CustomerProfile] sfOpenSofaOrd:', e); }
   }
 
-  /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+  /* ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬
      INLINE EDIT
-  ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+  ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
   function editProfile() {
     if (!C.currentData || !C.currentData.customer) return;
     var c = C.currentData.customer;
@@ -13428,7 +13504,7 @@ var swankCustomers = (function(){
       return;
     }
     var saveBtn = _el('cp-save-btn');
-    if (saveBtn) { saveBtn.textContent = 'SavingΓÇª'; saveBtn.disabled = true; }
+    if (saveBtn) { saveBtn.textContent = 'Saving…'; saveBtn.disabled = true; }
 
     _api('PUT', '/api/customers/' + encodeURIComponent(C.currentData.customer.id), updates)
       .then(function(r){
@@ -13461,9 +13537,9 @@ var swankCustomers = (function(){
       .swankUpdateCustomer(C.currentId, { name: name.trim(), address: address.trim(), remarks: remarks.trim() });
   }
 
-  /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+  /* ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬
      ADD CUSTOMER (bottom sheet)
-  ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+  ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
   function openAddSheet() {
     ['cust-add-name','cust-add-mobile','cust-add-address','cust-add-remarks'].forEach(function(id){
       var e = _el(id); if(e) e.value = '';
@@ -13498,7 +13574,7 @@ var swankCustomers = (function(){
     }
     _hide('cust-add-error');
     var btn = _el('cust-add-btn');
-    if (btn) { btn.textContent = 'SavingΓÇª'; btn.disabled = true; }
+    if (btn) { btn.textContent = 'Saving…'; btn.disabled = true; }
 
     var session = (typeof swank !== 'undefined' && swank.getSession) ? swank.getSession() : null;
     var username = session ? (session.username || '') : '';
@@ -13524,15 +13600,15 @@ var swankCustomers = (function(){
       .swankSaveCustomer({ name: name.trim(), mobile: mobile.trim(), address: address.trim(), remarks: remarks.trim() }, username);
   }
 
-  /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+  /* ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬
      DEDUPLICATION MODAL
-  ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+  ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
   function handleDuplicate(existing) {
     C.dedupExisting = existing;
     var msgEl = _el('cust-dedup-msg');
     var exEl  = _el('cust-dedup-existing');
     if (msgEl) msgEl.textContent = 'A customer with this mobile number already exists:';
-    if (exEl)  exEl.textContent  = (existing.name || 'ΓÇö') + ' ┬╖ ' + (existing.mobile || '');
+    if (exEl)  exEl.textContent  = (existing.name || '—') + ' · ' + (existing.mobile || '');
     var modal = _el('cust-dedup-modal');
     if (modal) modal.style.display = 'flex';
   }
@@ -13550,10 +13626,10 @@ var swankCustomers = (function(){
     openProfile(id);
   }
 
-  /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+  /* ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬
      PUBLIC API
-  ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
-  /* Called from estimate editor ΓÇö opens project sheet for a specific
+  ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
+  /* Called from estimate editor — opens project sheet for a specific
      customerId and fires a callback(projectId, projectName) on save */
   var _projSaveCallback = null;
   function openProjectSheetForCustomer(customerId, callback) {
@@ -13572,7 +13648,7 @@ var swankCustomers = (function(){
     if (!sheet || !overlay) return;
 
     if (projectId) {
-      // Edit mode ΓÇö find in current data
+      // Edit mode — find in current data
       var projects = (C.currentData && C.currentData.projects) || [];
       var proj = null;
       for (var i = 0; i < projects.length; i++) {
@@ -13609,7 +13685,7 @@ var swankCustomers = (function(){
     overlay.style.display = '';
     requestAnimationFrame(function(){
       sheet.classList.add('open');
-      // Guarantee padding is applied ΓÇö defensive against CSS cache issues
+      // Guarantee padding is applied — defensive against CSS cache issues
       var isDesktop = window.innerWidth >= 1024;
       sheet.style.padding = isDesktop
         ? '28px 40px calc(var(--sw-safe, 0px) + 32px)'
@@ -13632,7 +13708,7 @@ var swankCustomers = (function(){
     if (!name) { _toast('Project name is required'); return; }
 
     var btn = _el('proj-save-btn');
-    if (btn) { btn.disabled = true; btn.textContent = 'SavingΓÇª'; }
+    if (btn) { btn.disabled = true; btn.textContent = 'Saving…'; }
 
     var session = (typeof swank !== 'undefined' && swank.getSession) ? swank.getSession() : {};
 
@@ -13712,20 +13788,20 @@ var swankCustomers = (function(){
 <script>
 
 /* ============================================================
-   FURNISHING ORDERS ΓÇö FurnishingOrders.html
+   FURNISHING ORDERS — FurnishingOrders.html
    furnOrders global object.
    Phases implemented:
-     A ΓÇö Server-side pagination via furnOrderGetPaged()
-     B ΓÇö Client pagination controls (Prev/Next/page-size)
-     C ΓÇö Responsive column visibility (mobile/tablet/desktop)
-     D ΓÇö 300ms debounced search
+     A — Server-side pagination via furnOrderGetPaged()
+     B — Client pagination controls (Prev/Next/page-size)
+     C — Responsive column visibility (mobile/tablet/desktop)
+     D — 300ms debounced search
 ============================================================ */
 var furnOrders = (function(){
 
   var PAGE_SIZE_DEFAULT = 100;
 
   var FO = {
-    // Paged data ΓÇö one set per tab
+    // Paged data — one set per tab
     fab: { orders:[], total:0, page:1, pageSize:PAGE_SIZE_DEFAULT, totalPages:0 },
     bli: { orders:[], total:0, page:1, pageSize:PAGE_SIZE_DEFAULT, totalPages:0 },
     activeTab:    'fabric',
@@ -13745,7 +13821,7 @@ var furnOrders = (function(){
     filterOptionsLoaded: false  // true once company/customer lists fetched
   };
 
-  /* ΓöÇΓöÇ Helpers ΓöÇΓöÇ */
+  /* ── Helpers ── */
   function _el(id)     { return document.getElementById(id); }
   function _val(id)    { var e=_el(id); return e ? e.value.trim() : ''; }
   function _setVal(id,v){ var e=_el(id); if(e) e.value = v||''; }
@@ -13757,11 +13833,11 @@ var furnOrders = (function(){
 
   var _MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   function _fmtDate(d) {
-    if (!d) return 'ΓÇö';
+    if (!d) return '—';
     var s = String(d).trim();
     var m = s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
     if (m) return String(+m[3]).padStart(2,'0')+'-'+_MON[+m[2]-1]+'-'+m[1];
-    return s.substring(0,10)||'ΓÇö';
+    return s.substring(0,10)||'—';
   }
   function _badge(status) {
     var map = { 'Pending':'fo-badge-pending','Ordered':'fo-badge-ordered',
@@ -13772,7 +13848,7 @@ var furnOrders = (function(){
     return (typeof swank !== 'undefined' && swank.getSession) ? swank.getSession() : null;
   }
 
-  /* ΓöÇΓöÇ Build filter params from current UI state ΓöÇΓöÇ */
+  /* ── Build filter params from current UI state ── */
   function _buildParams(tab, page, pageSize) {
     return {
       itemType: tab === 'fabric' ? 'Fabric' : 'Blinds',
@@ -13787,9 +13863,9 @@ var furnOrders = (function(){
     };
   }
 
-  /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+  /* ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬
      PHASE A: Server-paged load
-  ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+  ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
   function load() {
     var session = _session();
     var isAdmin = session && session.role === 'ADMIN';
@@ -13860,9 +13936,9 @@ var furnOrders = (function(){
     if (clr) clr.style.display = _val('fo-search') ? 'flex' : 'none';
   }
 
-  /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+  /* ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬
      PHASE B: Pagination controls
-  ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+  ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
   function _renderPagination(tab) {
     var state = tab === 'fabric' ? FO.fab : FO.bli;
     var topEl = _el('fo-' + tab + '-pagination-top');
@@ -13874,7 +13950,7 @@ var furnOrders = (function(){
     var start      = total ? (state.page - 1) * state.pageSize + 1 : 0;
     var end        = Math.min(state.page * state.pageSize, total);
 
-    // Page-size selector ΓÇö same for both positions
+    // Page-size selector — same for both positions
     var sizeSel = '<select class="fo-page-size-sel" onchange="furnOrders._setPageSize(\''+tab+'\',this.value)">'
       + [50,100,500,1000].map(function(n){
           return '<option value="'+n+'"'+(n===state.pageSize?' selected':'')+'>'+n+' / pg</option>';
@@ -13887,7 +13963,7 @@ var furnOrders = (function(){
       + (state.totalPages > 1 ? ' \u00b7 Page <strong>'+state.page+'</strong> of <strong>'+state.totalPages+'</strong>' : '')
       + '</span>';
 
-    // Prev / Next only ΓÇö compact for top bar; full page buttons only at bottom
+    // Prev / Next only — compact for top bar; full page buttons only at bottom
     var prevBtn = '<button class="fo-page-btn" '+(state.page===1?'disabled':'')+' onclick="furnOrders._goPage(\''+tab+'\','+(state.page-1)+')">\u2039 Prev</button>';
     var nextBtn = '<button class="fo-page-btn" '+(state.page===state.totalPages||singlePage?'disabled':'')+' onclick="furnOrders._goPage(\''+tab+'\','+(state.page+1)+')">Next \u203a</button>';
 
@@ -13913,7 +13989,7 @@ var furnOrders = (function(){
       fullBtns += nextBtn;
     }
 
-    // Top bar: [size selector] [full page buttons] [info] ΓÇö same as bottom
+    // Top bar: [size selector] [full page buttons] [info] — same as bottom
     if (topEl) {
       topEl.innerHTML = sizeSel
         + (fullBtns ? '<div class="fo-page-btns">'+fullBtns+'</div>' : '')
@@ -13944,12 +14020,12 @@ var furnOrders = (function(){
     _loadTab(tab);
   }
 
-  /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+  /* ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬
      PHASE C: Render with responsive columns
      Columns tagged fo-col-tablet / fo-col-desktop
-     are shown/hidden via CSS ΓÇö no JS needed in rows,
+     are shown/hidden via CSS — no JS needed in rows,
      just the correct class on each <td>.
-  ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+  ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
   function _renderFabric(orders) {
     var tbody = _el('fo-fabric-tbody');
     var empty = _el('fo-fabric-empty');
@@ -13961,7 +14037,7 @@ var furnOrders = (function(){
     }
     if (empty) empty.style.display = 'none';
     tbody.innerHTML = orders.filter(function(o){
-      // Guard: skip rows with no order number and no customer ΓÇö these are blank sheet rows
+      // Guard: skip rows with no order number and no customer — these are blank sheet rows
       return !!(o.orderNumber || o.customerName);
     }).map(function(o){
       var safeId    = _esc(o.id);
@@ -13969,7 +14045,7 @@ var furnOrders = (function(){
       var rowCls    = FO.selectedIds[o.id] ? ' class="fo-row-selected"' : '';
 
       var itemLine = '';
-      if (o.collection && o.productName)      itemLine = _esc(o.collection) + ' ┬╖ ' + _esc(o.productName);
+      if (o.collection && o.productName)      itemLine = _esc(o.collection) + ' · ' + _esc(o.productName);
       else if (o.collection)                  itemLine = _esc(o.collection);
       else if (o.productName)                 itemLine = _esc(o.productName);
       else if (o.company)                     itemLine = _esc(o.company);
@@ -13983,7 +14059,7 @@ var furnOrders = (function(){
       var card = '<div class="fo-mob-top">'
         + '<div>'
           + '<div class="fo-mob-ordnum">'+_esc(o.orderNumber)+'</div>'
-          + '<div class="fo-mob-cust">'+_esc(o.customerName||'ΓÇö')+'</div>'
+          + '<div class="fo-mob-cust">'+_esc(o.customerName||'—')+'</div>'
           + (o.customerMobile ? '<div class="fo-mob-cust-mob">'+_esc(o.customerMobile)+'</div>' : '')
         + '</div>'
         + '<div class="fo-mob-meta">'+_badge(o.status)+'<button class="fo-menu-btn" onclick="furnOrders.openMenu(event,\''+safeId+'\')">Γï«</button></div>'
@@ -13995,14 +14071,14 @@ var furnOrders = (function(){
         +'<td class="fo-td-check" id="fo-chk-cell-'+safeId+'" style="'+(FO.selectMode?'':'display:none')+'"><input type="checkbox" class="fo-row-checkbox"'+isChecked+' onchange="furnOrders.toggleRow(\''+safeId+'\',this)"></td>'
         +'<td class="fo-mob-card">'+card+'</td>'
         +'<td class="fc-ordnum" style="font-weight:700;color:var(--sw-accent)">'+_esc(o.orderNumber)+'</td>'
-        +'<td class="fc-cust"><div style="font-weight:500">'+_esc(o.customerName||'ΓÇö')+'</div><div style="font-size:10px;color:var(--sw-txt3)">'+_esc(o.customerMobile||'')+'</div></td>'
-        +'<td class="fo-col-tablet fc-company">'+_esc(o.company||'ΓÇö')+'</td>'
-        +'<td class="fo-col-desktop fc-coll">'+_esc(o.collection||'ΓÇö')+'</td>'
-        +'<td class="fo-col-desktop fc-prod">'+_esc(o.productName||'ΓÇö')+'</td>'
-        +'<td class="fo-col-desktop fc-size">'+_esc(o.size||'ΓÇö')+'</td>'
+        +'<td class="fc-cust"><div style="font-weight:500">'+_esc(o.customerName||'—')+'</div><div style="font-size:10px;color:var(--sw-txt3)">'+_esc(o.customerMobile||'')+'</div></td>'
+        +'<td class="fo-col-tablet fc-company">'+_esc(o.company||'—')+'</td>'
+        +'<td class="fo-col-desktop fc-coll">'+_esc(o.collection||'—')+'</td>'
+        +'<td class="fo-col-desktop fc-prod">'+_esc(o.productName||'—')+'</td>'
+        +'<td class="fo-col-desktop fc-size">'+_esc(o.size||'—')+'</td>'
         +'<td class="fo-col-desktop fc-qty" style="text-align:right">'+_esc(String(o.qty||''))+'</td>'
-        +'<td class="fo-col-desktop fc-mrp" style="text-align:right">'+( o.mrp ? 'Γé╣'+o.mrp : 'ΓÇö' )+'</td>'
-        +'<td class="fo-col-desktop fc-serial">'+_esc(o.serialNumber||'ΓÇö')+'</td>'
+        +'<td class="fo-col-desktop fc-mrp" style="text-align:right">'+( o.mrp ? 'Γé╣'+o.mrp : '—' )+'</td>'
+        +'<td class="fo-col-desktop fc-serial">'+_esc(o.serialNumber||'—')+'</td>'
         +'<td class="fo-col-tablet fc-dord">'+_fmtDate(o.dateOfOrder)+'</td>'
         +'<td class="fo-col-desktop fc-recv">'+_fmtDate(o.receivingDate)+'</td>'
         +'<td class="fc-status">'+_badge(o.status)+'</td>'
@@ -14032,7 +14108,7 @@ var furnOrders = (function(){
 
       // Mobile card content
       var itemLine = '';
-      if (o.blindType && dims)      itemLine = _esc(o.blindType) + ' ┬╖ ' + _esc(dims);
+      if (o.blindType && dims)      itemLine = _esc(o.blindType) + ' · ' + _esc(dims);
       else if (o.blindType)         itemLine = _esc(o.blindType);
       else if (dims)                itemLine = _esc(dims);
 
@@ -14046,7 +14122,7 @@ var furnOrders = (function(){
       var card = '<div class="fo-mob-top">'
         + '<div>'
           + '<div class="fo-mob-ordnum">'+_esc(o.orderNumber)+'</div>'
-          + '<div class="fo-mob-cust">'+_esc(o.customerName||'ΓÇö')+'</div>'
+          + '<div class="fo-mob-cust">'+_esc(o.customerName||'—')+'</div>'
           + (o.customerMobile ? '<div class="fo-mob-cust-mob">'+_esc(o.customerMobile)+'</div>' : '')
         + '</div>'
         + '<div class="fo-mob-meta">'+_badge(o.status)+'<button class="fo-menu-btn" onclick="furnOrders.openMenu(event,\''+safeId+'\')">Γï«</button></div>'
@@ -14058,13 +14134,13 @@ var furnOrders = (function(){
         +'<td class="fo-td-check" id="fo-chk-cell-'+safeId+'" style="'+(FO.selectMode?'':'display:none')+'"><input type="checkbox" class="fo-row-checkbox"'+isChecked+' onchange="furnOrders.toggleRow(\''+safeId+'\',this)"></td>'
         +'<td class="fo-mob-card">'+card+'</td>'
         +'<td class="fc-ordnum" style="font-weight:700;color:var(--sw-accent)">'+_esc(o.orderNumber)+'</td>'
-        +'<td class="fc-cust"><div style="font-weight:500">'+_esc(o.customerName||'ΓÇö')+'</div><div style="font-size:10px;color:var(--sw-txt3)">'+_esc(o.customerMobile||'')+'</div></td>'
-        +'<td class="fo-col-tablet fc-btype">'+_esc(o.blindType||'ΓÇö')+'</td>'
-        +'<td class="fo-col-desktop fc-dims">'+_esc(dims||'ΓÇö')+'</td>'
-        +'<td class="fo-col-desktop fc-ctrl">'+_esc(o.controlSide||'ΓÇö')+'</td>'
-        +'<td class="fo-col-desktop fc-op">'+_esc(o.operationType||'ΓÇö')+'</td>'
-        +'<td class="fo-col-desktop fc-mat">'+_esc(o.fabricMaterial||'ΓÇö')+'</td>'
-        +'<td class="fo-col-desktop fc-room">'+_esc(o.roomLocation||'ΓÇö')+'</td>'
+        +'<td class="fc-cust"><div style="font-weight:500">'+_esc(o.customerName||'—')+'</div><div style="font-size:10px;color:var(--sw-txt3)">'+_esc(o.customerMobile||'')+'</div></td>'
+        +'<td class="fo-col-tablet fc-btype">'+_esc(o.blindType||'—')+'</td>'
+        +'<td class="fo-col-desktop fc-dims">'+_esc(dims||'—')+'</td>'
+        +'<td class="fo-col-desktop fc-ctrl">'+_esc(o.controlSide||'—')+'</td>'
+        +'<td class="fo-col-desktop fc-op">'+_esc(o.operationType||'—')+'</td>'
+        +'<td class="fo-col-desktop fc-mat">'+_esc(o.fabricMaterial||'—')+'</td>'
+        +'<td class="fo-col-desktop fc-room">'+_esc(o.roomLocation||'—')+'</td>'
         +'<td class="fo-col-tablet fc-dord">'+_fmtDate(o.dateOfOrder)+'</td>'
         +'<td class="fo-col-desktop fc-recv">'+_fmtDate(o.receivingDate)+'</td>'
         +'<td class="fc-status">'+_badge(o.status)+'</td>'
@@ -14074,9 +14150,9 @@ var furnOrders = (function(){
     }).join('');
   }
 
-  /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+  /* ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬
      TAB + FILTERS
-  ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+  ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
   function switchTab(tab, btn) {
     FO.activeTab = tab;
     document.querySelectorAll('.fo-tab-bar .filter-tab').forEach(function(b){ b.classList.remove('active'); });
@@ -14086,7 +14162,7 @@ var furnOrders = (function(){
     closeMenu();
   }
 
-  /* Phase D: debounced search ΓÇö waits 300ms after last keystroke */
+  /* Phase D: debounced search — waits 300ms after last keystroke */
   function filter(q) {
     clearTimeout(FO.searchTimer);
     var clr = _el('fo-search-clear');
@@ -14200,9 +14276,9 @@ var furnOrders = (function(){
   function setStatusFilter(s, btn) { _setVal('fo-f-status', s==='ALL'?'':s); applyFilters(); }
   function clearDateFilter()       { _setVal('fo-date-from',''); _setVal('fo-date-to',''); applyFilters(); }
 
-  /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+  /* ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬
      ROW ACTION MENU
-  ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+  ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
   function openMenu(event, id) {
     event.stopPropagation();
     FO.menuOrderId = id;
@@ -14290,7 +14366,7 @@ var furnOrders = (function(){
     if (!o || !o.customerMobile) { _toast('No mobile number for this customer'); return; }
     var session  = _session();
     var username = session ? (session.username || '') : '';
-    _toast('Saving customerΓÇª');
+    _toast('Saving customer…');
     _api('PUT', '/api/furnishing-orders/' + encodeURIComponent(o.id), {})
       .then(function(r){
         if (r && r.success) {
@@ -14332,9 +14408,9 @@ var furnOrders = (function(){
     });
   }
 
-  /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+  /* ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬
      EDIT ORDER
-  ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+  ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
   function _startEdit(order) {
     FO.editingId = order.id;
     var o = order;
@@ -14343,7 +14419,7 @@ var furnOrders = (function(){
     var saveBtn = _el('fo-save-btn');    if (saveBtn) { saveBtn.textContent = 'Save Changes'; saveBtn.disabled = false; }
 
     setItemType(o.itemType || 'Fabric');
-    _setVal('fo-cust-search', (o.customerName||'') + (o.customerMobile ? ' ┬╖ '+o.customerMobile : ''));
+    _setVal('fo-cust-search', (o.customerName||'') + (o.customerMobile ? ' · '+o.customerMobile : ''));
     _setVal('fo-cust-name',   o.customerName   || '');
     _setVal('fo-cust-mobile', o.customerMobile || '');
     FO.selectedCust = o.customerId ? { id: o.customerId, name: o.customerName, mobile: o.customerMobile } : null;
@@ -14420,9 +14496,9 @@ var furnOrders = (function(){
 
   function cancelEdit() { FO.editingId = null; closeAddSheet(); }
 
-  /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+  /* ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬
      ADD SHEET
-  ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+  ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
   function openAddSheet() { _resetSheet(); _show('fo-add-overlay'); _show('fo-add-sheet'); }
 
   function closeAddSheet() {
@@ -14475,14 +14551,14 @@ var furnOrders = (function(){
     if (!list.length) { _closeAc(); return; }
     ac.innerHTML = list.map(function(c){
       var safeId = _esc(c.id);
-      return '<div class="fo-ac-item" onclick="furnOrders.selectCustomer(\''+safeId+'\',\''+_esc(c.name)+'\',\''+_esc(c.mobile)+'\')"><div class="fo-ac-name">'+_esc(c.name||'ΓÇö')+'</div><div class="fo-ac-mobile">'+_esc(c.mobile||'')+'</div></div>';
+      return '<div class="fo-ac-item" onclick="furnOrders.selectCustomer(\''+safeId+'\',\''+_esc(c.name)+'\',\''+_esc(c.mobile)+'\')"><div class="fo-ac-name">'+_esc(c.name||'—')+'</div><div class="fo-ac-mobile">'+_esc(c.mobile||'')+'</div></div>';
     }).join('');
     ac.style.display = 'block';
   }
 
   function selectCustomer(id, name, mobile) {
     FO.selectedCust = { id:id, name:name, mobile:mobile };
-    _setVal('fo-cust-search', name + (mobile ? ' ┬╖ ' + mobile : ''));
+    _setVal('fo-cust-search', name + (mobile ? ' · ' + mobile : ''));
     _setVal('fo-cust-name', name); _setVal('fo-cust-mobile', mobile);
     _closeAc();
   }
@@ -14494,7 +14570,7 @@ var furnOrders = (function(){
     var list = _el('fo-company-list'); if (!list) return;
     if (list.style.display !== 'none') { _hideCompanyList(); return; }
     if (!FO.companiesLoaded) {
-      list.innerHTML = '<div style="padding:12px;font-size:12px;color:var(--sw-txt3)">LoadingΓÇª</div>';
+      list.innerHTML = '<div style="padding:12px;font-size:12px;color:var(--sw-txt3)">Loading…</div>';
       list.style.display = 'block';
       _api('GET', '/api/companies/picker')
         .then(function(r){
@@ -14530,7 +14606,7 @@ var furnOrders = (function(){
     if (!FO.selectedComp) { _toast('Please select a company first'); return; }
     var list = _el('fo-collection-list'); if (!list) return;
     if (list.style.display !== 'none') { _hideCollectionList(); return; }
-    list.innerHTML = '<div style="padding:12px;font-size:12px;color:var(--sw-txt3)">LoadingΓÇª</div>';
+    list.innerHTML = '<div style="padding:12px;font-size:12px;color:var(--sw-txt3)">Loading…</div>';
     list.style.display = 'block';
     _api('GET', '/api/collections?company=' + encodeURIComponent(FO.selectedComp.name))
       .then(function(r){ FO.collections=Array.isArray(r)?r:[]; _renderCollectionList(); })
@@ -14591,7 +14667,7 @@ var furnOrders = (function(){
       payload.fabricMaterial = _val('fo-fabric-mat');
       payload.roomLocation = _val('fo-room');
     }
-    var btn=_el('fo-save-btn'); if(btn){btn.textContent='SavingΓÇª';btn.disabled=true;}
+    var btn=_el('fo-save-btn'); if(btn){btn.textContent='Saving…';btn.disabled=true;}
     _api('POST', '/api/furnishing-orders', payload)
       .then(function(r){
         if(btn){btn.textContent='Save Order';btn.disabled=false;}
@@ -14604,15 +14680,15 @@ var furnOrders = (function(){
       })
   }
 
-  /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+  /* ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬
      SEND FROM ESTIMATE
-  ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+  ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
   function sendFromEstimate(estId, estNumber, itemCount) {
     var session  = _session();
     var username = session ? (session.username||'') : '';
     swank.confirm('Send to Orders','Create '+itemCount+' order row(s) from estimate '+estNumber+'?','Send',false,function(ok){
       if (!ok) return;
-      _toast('Creating ordersΓÇª');
+      _toast('Creating orders…');
       _api('POST', '/api/furnishing-orders/from-estimate', {estId: estId})
         .then(function(r){
           if (r && r.success) {
@@ -14627,12 +14703,12 @@ var furnOrders = (function(){
     });
   }
 
-  /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-     EXPORT ΓÇö uses full filtered data from server
-  ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+  /* ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬
+     EXPORT — uses full filtered data from server
+  ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
   function exportExcel() {
     var btn = _el('fo-export-btn');
-    if (btn) { btn.textContent = 'ExportingΓÇª'; btn.disabled = true; }
+    if (btn) { btn.textContent = 'Exporting…'; btn.disabled = true; }
 
     var session = _session();
     // Export all pages: pass current filters but pageSize=10000
@@ -14670,9 +14746,9 @@ var furnOrders = (function(){
       .furnOrderGetPaged(params);
   }
 
-  /* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+  /* ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬
      BULK SELECT & DELETE (Admin only)
-  ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */
+  ╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬ */
   function toggleSelectMode() {
     var session = _session();
     if (!session || session.role !== 'ADMIN') return;
@@ -14751,10 +14827,10 @@ var furnOrders = (function(){
     swank.confirm('Delete Orders', msg, 'Delete ' + n, true, function(ok) {
       if (!ok) return;
       var delBtn = _el('fo-bulk-del-btn');
-      if (delBtn) { delBtn.disabled = true; delBtn.textContent = 'DeletingΓÇª'; }
+      if (delBtn) { delBtn.disabled = true; delBtn.textContent = 'Deleting…'; }
       _api('POST', '/api/furnishing-orders/bulk-delete', {ids: ids, callerRole: session.role})
         .then(function(r) {
-          if (delBtn) { delBtn.disabled = false; delBtn.textContent = '≡ƒùæ Delete Selected'; }
+          if (delBtn) { delBtn.disabled = false; delBtn.textContent = 'Delete Selected'; }
           if (r && r.success) {
             _toast('Deleted ' + r.deleted + ' order' + (r.deleted > 1 ? 's' : '') + ' Γ£ô');
             FO.selectedIds = {}; FO.selectMode = false;
@@ -14763,8 +14839,8 @@ var furnOrders = (function(){
           } else { _toast((r && r.error) || 'Delete failed'); }
         })
         .catch(function() {
-          if (delBtn) { delBtn.disabled = false; delBtn.textContent = '≡ƒùæ Delete Selected'; }
-          _toast('Connection error ΓÇö delete failed');
+          if (delBtn) { delBtn.disabled = false; delBtn.textContent = 'Delete Selected'; }
+          _toast('Connection error — delete failed');
         })
     });
   }
@@ -14812,7 +14888,7 @@ var swankAnalytics = (function(){
     return 'Γé╣' + _fmt(n);
   }
 
-  /* ΓöÇΓöÇ Period selector ΓöÇΓöÇ */
+  /* ── Period selector ── */
   function setPeriod(p, btn) {
     AN.period = p;
     document.querySelectorAll('.an-period-btn').forEach(function(b){ b.classList.remove('active'); });
@@ -14828,13 +14904,13 @@ var swankAnalytics = (function(){
     _render();
   }
 
-  /* ΓöÇΓöÇ Load from server ΓöÇΓöÇ */
+  /* ── Load from server ── */
   function load() {
     if (AN.data) { _render(); return; }  // already have data (injected from home alert call)
     if (AN.loading) return;
     AN.loading = true;
     var content = _el('an-content');
-    if (content) content.innerHTML = '<div class="an-loading"><div class="spinner-ring" style="width:18px;height:18px;border-width:2px"></div>Loading analyticsΓÇª</div>';
+    if (content) content.innerHTML = '<div class="an-loading"><div class="spinner-ring" style="width:18px;height:18px;border-width:2px"></div>Loading analytics…</div>';
 
     _api('GET', '/api/analytics')
       .then(function(r){
@@ -14855,7 +14931,7 @@ var swankAnalytics = (function(){
 
   function refresh() { AN.data = null; load(); }
 
-  /* ΓöÇΓöÇ Get the right stats slice ΓöÇΓöÇ */
+  /* ── Get the right stats slice ── */
   function _slice(group) {
     if (!AN.data) return null;
     var d = AN.data[group];
@@ -14871,10 +14947,10 @@ var swankAnalytics = (function(){
   }
 
   /* Custom range filtering done client-side on the raw allTime data */
-  /* We re-filter using the full allTime counts ΓÇö since server only returns
+  /* We re-filter using the full allTime counts — since server only returns
      aggregates, we use allTime as the baseline and note the range in UI */
   function _customSlice(group) {
-    // For custom, show allTime and annotate ΓÇö full client-side filter
+    // For custom, show allTime and annotate — full client-side filter
     // would require raw rows; instead show allTime with a note
     return AN.data[group].allTime;
   }
@@ -14886,11 +14962,11 @@ var swankAnalytics = (function(){
       case 'days30': return 'Last 30 Days';
       case 'all':    return 'All Time';
       case 'custom':
-        return (AN.customFrom || 'ΓÇª') + ' ΓåÆ ' + (AN.customTo || 'ΓÇª') + ' (All Time shown)';
+        return (AN.customFrom || '…') + ' → ' + (AN.customTo || '…') + ' (All Time shown)';
     }
   }
 
-  /* ΓöÇΓöÇ Render ΓöÇΓöÇ */
+  /* ── Render ── */
   function _render() {
     var content = _el('an-content');
     if (!content) return;
@@ -14903,20 +14979,20 @@ var swankAnalytics = (function(){
 
     var html = '';
 
-    /* ΓöÇΓöÇ Estimates section ΓöÇΓöÇ */
+    /* ── Estimates section ── */
     html += '<div class="an-section">';
-    html += '<div class="an-section-title">Estimates ┬╖ ' + _esc(label) + '</div>';
+    html += '<div class="an-section-title">Estimates · ' + _esc(label) + '</div>';
     html += '<div class="an-stat-grid">';
-    html += _statCard('Total Estimates', est.total, est.draft + ' draft ┬╖ ' + est.final + ' final', 'an-stat-accent');
+    html += _statCard('Total Estimates', est.total, est.draft + ' draft · ' + est.final + ' final', 'an-stat-accent');
     html += _statCard('Total Value', _fmtK(est.totalValue), _fmtK(est.finalValue) + ' final', 'an-stat-green');
     html += _statCard('Draft Value', _fmtK(est.draftValue), est.draft + ' draft estimates', '');
     html += _statCard('Final Value', _fmtK(est.finalValue), est.final + ' final estimates', 'an-stat-green');
     html += '</div>';
     html += '</div>';
 
-    /* ΓöÇΓöÇ Furnishing Orders section ΓöÇΓöÇ */
+    /* ── Furnishing Orders section ── */
     html += '<div class="an-section">';
-    html += '<div class="an-section-title">Furnishing Orders ┬╖ ' + _esc(label) + '</div>';
+    html += '<div class="an-section-title">Furnishing Orders · ' + _esc(label) + '</div>';
     html += _statusBreakdown([
       { name:'Pending',       count:furn.pending,  color:'var(--sw-warm)' },
       { name:'Ordered',       count:furn.ordered,  color:'#2A5AA0' },
@@ -14926,9 +15002,9 @@ var swankAnalytics = (function(){
     ], furn.total);
     html += '</div>';
 
-    /* ΓöÇΓöÇ Sofa Orders section ΓöÇΓöÇ */
+    /* ── Sofa Orders section ── */
     html += '<div class="an-section">';
-    html += '<div class="an-section-title">Sofa Orders ┬╖ ' + _esc(label) + '</div>';
+    html += '<div class="an-section-title">Sofa Orders · ' + _esc(label) + '</div>';
     html += _statusBreakdown([
       { name:'Draft',          count:sofa.draft,      color:'var(--sw-txt3)' },
       { name:'Confirmed',      count:sofa.confirmed,  color:'#2A5AA0' },
@@ -14987,7 +15063,7 @@ var swankAnalytics = (function(){
 var swankProjects = (function() {
   'use strict';
 
-  /* ΓöÇΓöÇ State ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+  /* ── State ─────────────────────────────────────────── */
   var PR = {
     projects:     [],
     loaded:       false,
@@ -15002,7 +15078,7 @@ var swankProjects = (function() {
     pickerSelId:  null,
     companies:    [],
     companiesLoaded: false,
-    collections:  {},   // company ΓåÆ []
+    collections:  {},   // company → []
     detail:       null, // current collection detail
     // Room master
     roomMaster:   [],
@@ -15010,7 +15086,7 @@ var swankProjects = (function() {
     selectedMasterRooms: [],
   };
 
-  /* ΓöÇΓöÇ Helpers ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+  /* ── Helpers ────────────────────────────────────────── */
   function _el(id) { return document.getElementById(id); }
   function _val(id) { var e=_el(id); return e ? (e.tagName==='SELECT'?e.value:e.value.trim()) : ''; }
   function _set(id, v) { var e=_el(id); if(e) e.value = v||''; }
@@ -15026,18 +15102,18 @@ var swankProjects = (function() {
   }
   function _fmtPrice(v) {
     var n = parseFloat(v)||0;
-    return n > 0 ? 'Γé╣'+n.toLocaleString('en-IN') : 'ΓÇö';
+    return n > 0 ? 'Γé╣'+n.toLocaleString('en-IN') : '—';
   }
   function _statusClass(s) {
     var map = {'Active':'proj-status-active','Completed':'proj-status-completed','On Hold':'proj-status-on-hold','Cancelled':'proj-status-cancelled'};
     return map[s] || 'proj-status-active';
   }
 
-  /* ΓöÇΓöÇ Load projects list ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+  /* ── Load projects list ─────────────────────────────── */
   function load() {
     var container = _el('proj-list');
     if (!container) return;
-    container.innerHTML = '<div class="loading-state"><div class="spinner-ring"></div><p>Loading projectsΓÇª</p></div>';
+    container.innerHTML = '<div class="loading-state"><div class="spinner-ring"></div><p>Loading projects…</p></div>';
     _api('GET', '/api/projects/list')
       .then(function(r) {
         if (!r || !r.success) { container.innerHTML = '<div class="proj-empty"><p>Failed to load projects</p></div>'; return; }
@@ -15082,7 +15158,7 @@ var swankProjects = (function() {
         + '<div class="proj-card-name">' + _esc(p.projectName||'Untitled') + '</div>'
         + '<div class="proj-card-status ' + _statusClass(p.status) + '">' + _esc(p.status||'Active') + '</div>'
         + '</div>'
-        + '<div class="proj-card-meta">' + _esc(p.customerName||'') + (p.mobile ? ' ┬╖ ' + _esc(p.mobile) : '') + '</div>'
+        + '<div class="proj-card-meta">' + _esc(p.customerName||'') + (p.mobile ? ' · ' + _esc(p.mobile) : '') + '</div>'
         + (p.siteAddress ? '<div class="proj-card-meta" style="margin-top:2px">' + _esc(p.siteAddress.split('\n')[0]) + '</div>' : '')
         + '<div class="proj-card-footer">'
         + '<div style="color:var(--sw-txt3);font-size:11px">Created ' + _fmtDate(p.createdAt) + '</div>'
@@ -15104,13 +15180,13 @@ var swankProjects = (function() {
     _renderList();
   }
 
-  /* ΓöÇΓöÇ Open project detail ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+  /* ── Open project detail ────────────────────────────── */
   function openProject(id) {
     PR.current    = null;
     PR.rooms      = [];
     PR.selections = [];
-    _el('proj-detail-name').textContent = 'LoadingΓÇª';
-    _el('proj-detail-body').innerHTML   = '<div class="loading-state"><div class="spinner-ring"></div><p>LoadingΓÇª</p></div>';
+    _el('proj-detail-name').textContent = 'Loading…';
+    _el('proj-detail-body').innerHTML   = '<div class="loading-state"><div class="spinner-ring"></div><p>Loading…</p></div>';
     if (window.swank) swank.showScreen('project-detail');
 
     _api('GET', '/api/projects/' + encodeURIComponent(id))
@@ -15134,7 +15210,7 @@ var swankProjects = (function() {
 
     var html = '';
 
-    // ΓöÇΓöÇ Section 1: Customer + Project info ΓöÇΓöÇ
+    // ── Section 1: Customer + Project info ──
     html += '<div class="proj-section">';
     html += '<div class="proj-section-title">Project Details</div>';
     html += '<div class="proj-field-grid">';
@@ -15170,7 +15246,7 @@ var swankProjects = (function() {
       html += '</div>';
     }
 
-    // ΓöÇΓöÇ Section 2: Rooms + Fabric Selections ΓöÇΓöÇ
+    // ── Section 2: Rooms + Fabric Selections ──
     html += '<div class="proj-section">';
     html += '<div class="proj-section-title">Rooms &amp; Fabric Selections</div>';
 
@@ -15192,11 +15268,11 @@ var swankProjects = (function() {
             html += '<div class="proj-sel-row">';
             html += '<div class="proj-sel-info">';
             if (s.company || s.collection) {
-              html += '<div class="proj-sel-company">' + _esc([s.company, s.collection].filter(Boolean).join(' ┬╖ ')) + '</div>';
+              html += '<div class="proj-sel-company">' + _esc([s.company, s.collection].filter(Boolean).join(' · ')) + '</div>';
             }
             var name = [s.quality, s.serialNo].filter(Boolean).join(' / ') || s.category || 'Selection';
             html += '<div class="proj-sel-name">' + _esc(name) + '</div>';
-            var meta = [s.category, s.fabricUse, s.stitchingType].filter(Boolean).join(' ┬╖ ');
+            var meta = [s.category, s.fabricUse, s.stitchingType].filter(Boolean).join(' · ');
             if (meta) html += '<div class="proj-sel-meta">' + _esc(meta) + '</div>';
             if (s.qty) html += '<div class="proj-sel-meta">' + s.qty + (s.unit?' '+s.unit:'') + '</div>';
             if (s.remarks) html += '<div class="proj-sel-meta" style="font-style:italic">' + _esc(s.remarks) + '</div>';
@@ -15233,12 +15309,12 @@ var swankProjects = (function() {
     var isEmpty = !value;
     var html = '<div class="proj-field"' + (fullWidth ? ' style="grid-column:1/-1"':'') + '>';
     html += '<div class="proj-field-label">' + _esc(label) + '</div>';
-    html += '<div class="proj-field-value' + (isEmpty?' empty':'') + '">' + _esc(value||'ΓÇö') + '</div>';
+    html += '<div class="proj-field-value' + (isEmpty?' empty':'') + '">' + _esc(value||'—') + '</div>';
     html += '</div>';
     return html;
   }
 
-  /* ΓöÇΓöÇ New / Edit Project Form ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+  /* ── New / Edit Project Form ────────────────────────── */
   function newProject() {
     _set('proj-form-id', '');
     _set('proj-form-customer', '');
@@ -15321,7 +15397,7 @@ var swankProjects = (function() {
     if (!data.id) delete data.id;
 
     var btn = document.querySelector('.proj-form-save');
-    if (btn) { btn.disabled = true; btn.textContent = 'SavingΓÇª'; }
+    if (btn) { btn.disabled = true; btn.textContent = 'Saving…'; }
 
     _api('POST', '/api/projects', data)
       .then(function(r) {
@@ -15349,7 +15425,7 @@ var swankProjects = (function() {
     if (el) { el.textContent = msg; _show('proj-form-error'); }
   }
 
-  /* ΓöÇΓöÇ Room Overlay ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+  /* ── Room Overlay ───────────────────────────────────── */
   function openRoomOverlay() {
     PR.selectedMasterRooms = [];
     _set('proj-room-custom-input', '');
@@ -15368,7 +15444,7 @@ var swankProjects = (function() {
 
   function _loadRoomMaster() {
     var el = _el('proj-room-master-list');
-    if (el) el.innerHTML = '<div style="font-size:12px;color:var(--sw-txt3)">LoadingΓÇª</div>';
+    if (el) el.innerHTML = '<div style="font-size:12px;color:var(--sw-txt3)">Loading…</div>';
 
     _api('GET', '/api/projects/room-master')
       .then(function(r) {
@@ -15422,7 +15498,7 @@ var swankProjects = (function() {
     if (!projectId) return;
 
     var saveBtn = document.querySelector('#proj-room-overlay .proj-form-save');
-    if (saveBtn) { saveBtn.disabled = true; saveBtn.textContent = 'AddingΓÇª'; }
+    if (saveBtn) { saveBtn.disabled = true; saveBtn.textContent = 'Adding…'; }
 
     // Save rooms sequentially
     var promise = Promise.resolve();
@@ -15453,7 +15529,7 @@ var swankProjects = (function() {
       });
   }
 
-  /* ΓöÇΓöÇ Fabric Picker ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+  /* ── Fabric Picker ──────────────────────────────────── */
   function openPicker(roomId, selId) {
     PR.pickerRoomId = roomId;
     PR.pickerSelId  = selId || null;
@@ -15493,7 +15569,7 @@ var swankProjects = (function() {
   function _loadPickerCompanies() {
     var sel = _el('proj-picker-company');
     if (!sel) return;
-    sel.innerHTML = '<option value="">LoadingΓÇª</option>';
+    sel.innerHTML = '<option value="">Loading…</option>';
 
     _api('GET', '/api/companies/picker')
       .then(function(r) {
@@ -15531,12 +15607,12 @@ var swankProjects = (function() {
     _hide('proj-picker-qual-section');
     _hide('proj-picker-serial-section');
     _hide('proj-picker-mrp-section');
-    _el('proj-picker-mrp-val').textContent = 'ΓÇö';
+    _el('proj-picker-mrp-val').textContent = '—';
 
     if (!company) { _hide('proj-picker-col-section'); colSel.innerHTML = '<option value="">Select collection</option>'; return; }
 
     _show('proj-picker-col-section');
-    colSel.innerHTML = '<option value="">LoadingΓÇª</option>';
+    colSel.innerHTML = '<option value="">Loading…</option>';
 
     // Check cache
     if (PR.collections[company]) {
@@ -15567,7 +15643,7 @@ var swankProjects = (function() {
     if (!collection) return;
 
     var company = _val('proj-picker-company');
-    _el('proj-picker-quality').innerHTML = '<option value="">LoadingΓÇª</option>';
+    _el('proj-picker-quality').innerHTML = '<option value="">Loading…</option>';
 
     _api('GET', '/api/collections/detail?company=' + encodeURIComponent(company) + '&collection=' + encodeURIComponent(collection))
       .then(function(r) {
@@ -15620,8 +15696,8 @@ var swankProjects = (function() {
     var mrpIncl = gst > 0 ? Math.ceil(mrp * (1 + gst/100)) : mrp;
 
     _el('proj-picker-mrp-val').textContent      = 'Γé╣' + mrp.toLocaleString('en-IN');
-    _el('proj-picker-gst-val').textContent       = gst > 0 ? gst + '%' : 'ΓÇö';
-    _el('proj-picker-mrp-incl-val').textContent  = gst > 0 ? 'Γé╣' + mrpIncl.toLocaleString('en-IN') : 'ΓÇö';
+    _el('proj-picker-gst-val').textContent       = gst > 0 ? gst + '%' : '—';
+    _el('proj-picker-mrp-incl-val').textContent  = gst > 0 ? 'Γé╣' + mrpIncl.toLocaleString('en-IN') : '—';
     _show('proj-picker-mrp-section');
 
     // Store for save
@@ -15661,7 +15737,7 @@ var swankProjects = (function() {
     };
 
     var btn = document.querySelector('.proj-picker-save');
-    if (btn) { btn.disabled = true; btn.textContent = 'SavingΓÇª'; }
+    if (btn) { btn.disabled = true; btn.textContent = 'Saving…'; }
 
     _api('POST', '/api/projects/' + encodeURIComponent(projectId) + '/selections', data)
       .then(function(r) {
@@ -15688,7 +15764,7 @@ var swankProjects = (function() {
       });
   }
 
-  /* ΓöÇΓöÇ Public API ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+  /* ── Public API ─────────────────────────────────────── */
   return {
     load, search, filterStatus,
     openProject, back, editProject,
