@@ -8825,27 +8825,7 @@ var swank = (function(){
         role:      role,            createdBy: S.session.username
       });
   }
-ound) return;
-    container._userBound = true;
-    container.addEventListener('click', function(e) {
-      var btn = e.target.closest('[data-action]');
-      if (!btn) return;
-      var action = btn.getAttribute('data-action');
-      var user   = btn.getAttribute('data-user');
-      var name   = btn.getAttribute('data-name') || user;
-      if (action === 'suspend') {
-        swank.confirm('Suspend User', 'Do you want to suspend ' + name + '?', 'Suspend', true, function(ok){
-          if (ok) updateUser(user, 'SUSPENDED');
-        });
-      } else if (action === 'delete') {
-        swank.confirm('Delete User', 'Do you want to delete ' + name + '? This cannot be undone.', 'Delete', true, function(ok){
-          if (ok) deleteUser(user);
-        });
-      } else if (action === 'approve')    { updateUser(user, 'ACTIVE'); }
-      else if (action === 'reject')       { updateUser(user, 'REJECTED'); }
-      else if (action === 'reactivate')   { updateUser(user, 'ACTIVE'); }
-    });
-  }
+
 
   /* ── User detail overlay ── */
   function _openUserDetail(username) {
