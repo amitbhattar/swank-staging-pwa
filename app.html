@@ -3512,6 +3512,24 @@ a{color:inherit;text-decoration:none;}
   margin-top:4px;
 }
 .meas-calc-result strong{color:var(--sw-accent);font-size:15px;}
+</style><style>
+/* ── Staging screens outside #main-content need explicit top offset ── */
+#screen-furnishing,
+#screen-projects,
+#screen-project-detail,
+#screen-measurements,
+#screen-measurement-detail {
+  top: var(--sw-hdr, 60px);
+}
+@media(min-width:1024px){
+  #screen-furnishing,
+  #screen-projects,
+  #screen-project-detail,
+  #screen-measurements,
+  #screen-measurement-detail {
+    left: var(--sw-sidebar, 240px);
+  }
+}
 </style></head>
 <body>
 <div id="app">
@@ -3719,6 +3737,46 @@ a{color:inherit;text-decoration:none;}
           <div class="sw-action-left"><div class="sw-action-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17h20v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-2z"/><path d="M2 11h20v6H2z"/><path d="M6 11V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4"/><path d="M4 17v2M20 17v2"/></svg></div><div class="sw-action-text"><div class="sw-action-label">Sofa Covers</div><div class="sw-action-sub">Prices, estimates &amp; order management</div></div></div>
           <div class="sw-action-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></div>
         </div>
+      </div>   <div class="sw-action-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+            </div>
+            <div class="sw-action-text">
+              <div class="sw-action-label">Price Finder</div>
+              <div class="sw-action-sub">Search collection prices instantly</div>
+            </div>
+          </div>
+          <div class="sw-action-arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+        <div class="sw-action-card" onclick="swank.showScreen('estimates')">
+          <div class="sw-action-left">
+            <div class="sw-action-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg>
+            </div>
+            <div class="sw-action-text">
+              <div class="sw-action-label">Estimates</div>
+              <div class="sw-action-sub">Create and view estimates</div>
+            </div>
+          </div>
+          <div class="sw-action-arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+        <div class="sw-action-card" onclick="swank.showScreen('sofa')">
+          <div class="sw-action-left">
+            <div class="sw-action-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17h20v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-2z"/><path d="M2 11h20v6H2z"/><path d="M6 11V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4"/><path d="M4 17v2M20 17v2"/></svg>
+            </div>
+            <div class="sw-action-text">
+              <div class="sw-action-label">Sofa Covers</div>
+              <div class="sw-action-sub">Prices, estimates &amp; order management</div>
+            </div>
+          </div>
+          <div class="sw-action-arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
       </div>
 
             <!-- ── Two-column layout: Recent + Todo ── -->
@@ -3764,7 +3822,6 @@ a{color:inherit;text-decoration:none;}
           </div>
         </div>
 
-      </div>
     </div>
   </div>
 </section>
@@ -4342,7 +4399,7 @@ a{color:inherit;text-decoration:none;}
 </section>
 
 <!-- ════════ USER MANAGEMENT ════════ -->
-<section id="screen-users" class="screen">
+<section <section id="screen-users" class="screen">
   <div class="screen-scroll">
 
     <!-- Header -->
@@ -4389,6 +4446,15 @@ a{color:inherit;text-decoration:none;}
       <div class="loading-state"><div class="spinner-ring"></div><p>Loading users…</p></div>
     </div>
 
+  </div>
+</section>
+      <button class="user-filter-btn active" onclick="swank.filterUsers('ALL',this)">All</button>
+      <button class="user-filter-btn" onclick="swank.filterUsers('PENDING',this)">Pending</button>
+      <button class="user-filter-btn" onclick="swank.filterUsers('ACTIVE',this)">Active</button>
+      <button class="user-filter-btn" onclick="swank.filterUsers('SUSPENDED',this)">Suspended</button>
+      <button class="user-filter-btn" onclick="swank.filterUsers('REJECTED',this)">Rejected</button>
+    </div>
+    <div id="users-list"><div class="loading-state"><div class="spinner-ring"></div><p>Loading users…</p></div></div>
   </div>
 </section>
 
@@ -4850,6 +4916,9 @@ a{color:inherit;text-decoration:none;}
           <div class="sw-action-left"><div class="sw-action-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg></div><div class="sw-action-text"><div class="sw-action-label">Projects</div><div class="sw-action-sub">Track customer projects end-to-end</div></div></div>
           <div class="sw-action-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></div>
         </div>
+      </div>
+    </div>
+  </div>
 
         <div class="sw-action-card" onclick="swankMeasurements.newVisit()">
           <div class="sw-action-left"><div class="sw-action-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><div class="sw-action-text"><div class="sw-action-label">Measurements</div><div class="sw-action-sub">Record site measurements</div></div></div>
