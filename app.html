@@ -3624,9 +3624,9 @@ a{color:inherit;text-decoration:none;}
     <div class="drawer-item" onclick="swank.showScreen('sofa');swank.closeDrawer()">
     <div class="drawer-item" onclick="swank.showScreen('furnishing');swank.closeDrawer()"
     <div class="drawer-item" onclick="swank.showScreen('customers');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Customers</div>
-    <div class="drawer-item" onclick="swank.showScreen('analytics')
+    <div class="drawer-item" onclick="swank.showScreen('analytics');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Analytics</div>
     <div class="drawer-item" onclick="swank.showScreen('projects');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>Projects</div>
-    <div class="drawer-item" onclick="swank.showScreen('measurements');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Measurements</div>;swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Analytics</div>><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Furnishing</div><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9H3V9z"/><path d="M3 13h18"/><path d="M5 18v2"/><path d="M19 18v2"/></svg>Sofa Covers</div>
+    <div class="drawer-item" onclick="swank.showScreen('measurements');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Measurements</div>><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Furnishing</div><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9H3V9z"/><path d="M3 13h18"/><path d="M5 18v2"/><path d="M19 18v2"/></svg>Sofa Covers</div>
     <div class="drawer-item" onclick="swank.showScreen('favorites');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Favourites</div>
     <div class="drawer-item" onclick="swank.showScreen('history');swank.closeDrawer()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>History</div>
     <div class="drawer-divider"></div>
@@ -6697,8 +6697,8 @@ var swank = (function(){
     if(!S.session||(S.session.role!=='ADMIN'&&S.session.role!=='MANAGER')) return;
     var container=document.getElementById('users-list');
     if(container) container.innerHTML='<div class="loading-state"><div class="spinner-ring"></div><p>Loading users…</p></div>';
-    google.script.run
-      .withSuccessHandler(function(r){
+    _api('GET', '/api/users')
+      .then(function(r){
         if(r&&r.success){
           S.allUsers=r.users||[];
           S.userSearch='';
@@ -6710,8 +6710,7 @@ var swank = (function(){
           if(container) container.innerHTML='<div class="empty-state"><p>Could not load users.</p></div>';
         }
       })
-      .withFailureHandler(function(err){ console.error(err); })
-      .swankGetUsers(S.session.username, S.session.role);
+      .catch(function(err){ console.error(err); });
   }
 
   /* ── Stats bar: tappable counts per status ── */
@@ -6928,25 +6927,23 @@ var swank = (function(){
   function updateUser(username, updates){
     if (typeof updates === 'string') updates = { status: updates };
     if(!S.session||S.session.role!=='ADMIN') return;
-    google.script.run
-      .withSuccessHandler(function(r){
+    _api('PUT', '/api/users/' + encodeURIComponent(username), updates)
+      .then(function(r){
         if(r&&r.success){ _toast('User updated'); _closeUserDetail(); loadUsers(); }
         else _toast((r&&r.message)||'Update failed');
       })
-      .withFailureHandler(function(){ _toast('Error updating user'); })
-      .swankUpdateUser(S.session.role, S.session.username, username, updates);
+      .catch(function(){ _toast('Error updating user'); });
   }
 
   function deleteUser(username){
     swank.confirm('Delete User','Delete "'+username+'"? The account will be deactivated.','Delete',true,function(ok){
       if(!ok) return;
-      google.script.run
-        .withSuccessHandler(function(r){
+      _api('DELETE', '/api/users/' + encodeURIComponent(username))
+        .then(function(r){
           if(r&&r.success){ _toast('User deleted'); _closeUserDetail(); loadUsers(); }
           else _toast((r&&r.message)||'Delete failed');
         })
-        .withFailureHandler(function(){ _toast('Error deleting user'); })
-        .swankDeleteUser(S.session.role, S.session.username, username);
+        .catch(function(){ _toast('Error deleting user'); });
     });
   }
 
@@ -8465,20 +8462,19 @@ var swank = (function(){
     wrap.style.display = 'none';
     wrap.innerHTML = '';
 
-    google.script.run
-      .withSuccessHandler(function(r){
+    _api('GET', '/api/analytics')
+      .then(function(r){
         if (!r || !r.success) return;
         var alerts = (r.alerts && r.alerts.followUp) || [];
         _alertCache = alerts;
         // Share data with analytics module if already loaded
-        if (typeof swankAnalytics !== 'undefined' && !swankAnalytics._hasData()) {
+        if (typeof swankAnalytics !== 'undefined' && swankAnalytics._hasData && !swankAnalytics._hasData()) {
           swankAnalytics._injectData(r);
         }
         if (!alerts.length) { wrap.style.display = 'none'; return; }
         _renderHomeAlerts(alerts);
       })
-      .withFailureHandler(function(){}) // silent fail on home
-      .swankGetAnalytics();
+      .catch(function(){}); // silent fail on home
   }
 
   function _renderHomeAlerts(alerts) {
@@ -8543,13 +8539,12 @@ var swank = (function(){
   function _doResetDevice(username, name) {
     swank.confirm('Reset Device', 'Clear device binding for "' + name + '"?', 'Reset', false, function(ok) {
       if (!ok) return;
-      google.script.run
-        .withSuccessHandler(function(r){
+      _api('POST', '/api/reset-device', { username: username })
+        .then(function(r){
           if (r && r.success) { _toast('Device binding cleared'); loadUsers(); _openUserDetail(username); }
           else _toast((r && r.message) || 'Reset failed');
         })
-        .withFailureHandler(function(){ _toast('Error resetting device'); })
-        .swankResetDevice(S.session.role, S.session.username, username);
+        .catch(function(){ _toast('Error resetting device'); });
     });
   }
 
@@ -8570,13 +8565,12 @@ var swank = (function(){
     var pw2 = (document.getElementById('udp-pw2')||{}).value||'';
     if (!pw1.trim()) { _toast('Enter a new password'); return; }
     if (pw1 !== pw2) { _toast('Passwords do not match'); return; }
-    google.script.run
-      .withSuccessHandler(function(r){
+    _api('POST', '/api/update-user', { username: username, newPassword: pw1.trim() })
+      .then(function(r){
         if (r && r.success) { _toast('Password reset'); _openResetPass(username); }
         else _toast((r && r.message) || 'Reset failed');
       })
-      .withFailureHandler(function(){ _toast('Error resetting password'); })
-      .swankUpdateUser(S.session.role, S.session.username, username, { newPassword: pw1.trim() });
+      .catch(function(){ _toast('Error resetting password'); });
   }
 
   /* ── Toggle inline edit form ── */
@@ -8604,16 +8598,15 @@ var swank = (function(){
       payload.role = rol;
     }
 
-    google.script.run
-      .withSuccessHandler(function(r){
+    _api('POST', '/api/update-user', payload)
+      .then(function(r){
         if (r && r.success) {
           _toast('User updated');
           loadUsers();
           setTimeout(function(){ _openUserDetail(username); }, 400);
         } else _toast((r && r.message) || 'Update failed');
       })
-      .withFailureHandler(function(){ _toast('Error updating user'); })
-      .swankUpdateUser(S.session.role, S.session.username, username, payload);
+      .catch(function(){ _toast('Error updating user'); });
   }
 
 
@@ -8805,8 +8798,13 @@ var swank = (function(){
     var submitBtn = document.querySelector('#add-user-modal .sw-user-add-btn');
     if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Adding…'; }
 
-    google.script.run
-      .withSuccessHandler(function(r){
+    _api('POST', '/api/add-user', {
+        username:  username.trim(), password: password.trim(),
+        fullName:  fullname.trim(), mobile:   mobile.trim(),
+        email:     email.trim(),    empCode:  empcode.trim(),
+        role:      role,            createdBy: S.session.username
+      })
+      .then(function(r){
         if (submitBtn) {
           submitBtn.disabled = false;
           submitBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> Add User';
@@ -8814,15 +8812,9 @@ var swank = (function(){
         if (r && r.success) { _toast('✓ User added'); closeAddUser(); loadUsers(); }
         else _showErr((r && r.message) || 'Could not add user');
       })
-      .withFailureHandler(function(){
+      .catch(function(){
         if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Add User'; }
         _showErr('Connection error. Please try again.');
-      })
-      .swankAddUserByAdmin(S.session.role, {
-        username:  username.trim(), password: password.trim(),
-        fullName:  fullname.trim(), mobile:   mobile.trim(),
-        email:     email.trim(),    empCode:  empcode.trim(),
-        role:      role,            createdBy: S.session.username
       });
   }
 
