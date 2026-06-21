@@ -2906,7 +2906,7 @@ a{color:inherit;text-decoration:none;}
   }
   /* Remark — allow it to be slightly shorter */
   .fo-table .fc-remark { }
-  /* Γï« menu column — fixed narrow */
+  /* ☰ menu column — fixed narrow */
   .fo-td-menu, .fo-table thead th:last-child { width:36px; text-overflow:clip; }
 }
 .fo-table thead th{
@@ -2928,7 +2928,7 @@ a{color:inherit;text-decoration:none;}
 .fo-table tbody tr:hover{background:var(--sw-surface2);}
 
 /* ── Phase C: responsive column visibility ──────────────
-   Mobile   (< 600px):  Order#, Customer, Status, Γï«
+   Mobile   (< 600px):  Order#, Customer, Status, ☰
    Tablet  (600ΓÇô1023px): + Company / BlindType, Date, Remark
    Desktop (ΓëÑ 1024px):   All columns
 ─────────────────────────────────────────────────────── */
@@ -4547,7 +4547,7 @@ a{color:inherit;text-decoration:none;}
       <button class="fo-select-btn danger" id="fo-bulk-del-btn" onclick="furnOrders.bulkDelete()" disabled style="opacity:.5">
         Delete Selected
       </button>
-      <button class="fo-select-btn" onclick="furnOrders.toggleSelectMode()">Γ£ò Cancel</button>
+      <button class="fo-select-btn" onclick="furnOrders.toggleSelectMode()">✗ Cancel</button>
     </div>
 
     <!-- Tab bar -->
@@ -4767,7 +4767,7 @@ a{color:inherit;text-decoration:none;}
           </div>
           <div class="fo-row-fields">
             <div class="fo-field">
-              <label class="fo-label">MRP (Γé╣)</label>
+              <label class="fo-label">MRP (₹)</label>
               <input type="number" id="fo-mrp" class="fo-input" placeholder="0" min="0">
             </div>
             <div class="fo-field">
@@ -5040,7 +5040,7 @@ a{color:inherit;text-decoration:none;}
         oninput="swank.onUserSearch(this.value)"
         autocomplete="off" autocorrect="off" autocapitalize="none">
       <button id="users-search-clear" class="ul-search-clear" style="display:none"
-        onclick="swank.clearUserSearch()">Γ£ò</button>
+        onclick="swank.clearUserSearch()">✗</button>
     </div>
 
     <!-- Filter tabs -->
@@ -5485,67 +5485,6 @@ a{color:inherit;text-decoration:none;}
 
 <!-- ╬╬ USER DETAIL / EDIT OVERLAY ╬╬ -->
 <div id="user-detail-overlay" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:2000;background:rgba(58,45,40,.45);align-items:flex-end;justify-content:center;padding:0">
-  <div class="sw-user-panel" id="user-detail-panel">
-    <div class="sw-user-panel-header">
-      <div class="sw-user-panel-avatar" id="ud-avatar">?</div>
-      <div style="flex:1;min-width:0">
-        <div style="font-size:16px;font-weight:700;color:var(--sw-txt)" id="ud-name">—</div>
-        <div style="font-size:12px;color:var(--sw-txt3);margin-top:2px" id="ud-role">—</div>
-      </div>
-      <button class="inner-action" onclick="swank.closeUserDetail()" style="flex-shrink:0">✕</button>
-    </div>
-    <div class="sw-user-panel-body" id="ud-body">
-      <!-- view mode -->
-      <div id="ud-view">
-        <div class="sw-user-panel-row"><span class="sw-user-panel-lbl">Username</span><span class="sw-user-panel-val" id="ud-username">—</span></div>
-        <div class="sw-user-panel-row"><span class="sw-user-panel-lbl">Mobile</span><span class="sw-user-panel-val" id="ud-mobile">—</span></div>
-        <div class="sw-user-panel-row"><span class="sw-user-panel-lbl">Email</span><span class="sw-user-panel-val" id="ud-email">—</span></div>
-        <div class="sw-user-panel-row"><span class="sw-user-panel-lbl">Emp Code</span><span class="sw-user-panel-val" id="ud-empcode">—</span></div>
-        <div class="sw-user-panel-row"><span class="sw-user-panel-lbl">Status</span><span class="sw-user-panel-val" id="ud-status">—</span></div>
-        <div class="sw-user-panel-row"><span class="sw-user-panel-lbl">Device</span><span class="sw-user-panel-val" id="ud-device">—</span></div>
-      </div>
-      <!-- edit mode -->
-      <div id="ud-edit" style="display:none">
-        <div class="sw-user-edit-form">
-          <div class="sw-form-field"><label class="sw-form-label">Full Name</label><input class="sw-user-edit-input" id="ud-edit-name" type="text" autocomplete="off"></div>
-          <div class="sw-form-field"><label class="sw-form-label">Mobile</label><input class="sw-user-edit-input" id="ud-edit-mobile" type="tel" autocomplete="off"></div>
-          <div class="sw-form-field"><label class="sw-form-label">Email</label><input class="sw-user-edit-input" id="ud-edit-email" type="email" autocomplete="off"></div>
-          <div class="sw-form-field"><label class="sw-form-label">Emp Code</label><input class="sw-user-edit-input" id="ud-edit-empcode" type="text" autocomplete="off"></div>
-          <div class="sw-form-field"><label class="sw-form-label">New Password <span style="font-weight:400;text-transform:none">(leave blank to keep)</span></label><input class="sw-user-edit-input" id="ud-edit-password" type="password" autocomplete="new-password"></div>
-          <div class="sw-form-field"><label class="sw-form-label">Role</label>
-            <select class="sw-user-edit-input" id="ud-edit-role">
-              <option value="SALES">Sales</option>
-              <option value="MANAGER">Manager</option>
-              <option value="ADMIN">Admin</option>
-            </select>
-          </div>
-          <div class="sw-form-field"><label class="sw-form-label">Status</label>
-            <select class="sw-user-edit-input" id="ud-edit-status">
-              <option value="ACTIVE">Active</option>
-              <option value="SUSPENDED">Suspended</option>
-              <option value="PENDING">Pending</option>
-              <option value="REJECTED">Rejected</option>
-            </select>
-          </div>
-          <div id="ud-edit-error" style="display:none;color:var(--sw-danger);font-size:13px;padding:4px 0"></div>
-        </div>
-      </div>
-    </div>
-    <div class="sw-user-panel-footer">
-      <!-- view mode buttons -->
-      <div id="ud-footer-view" style="display:flex;gap:8px;flex-wrap:wrap;width:100%">
-        <button class="btn-accent" style="flex:1" onclick="swank.openEditUser()">Edit</button>
-        <button class="inner-action" id="ud-btn-suspend" onclick="swank.toggleSuspend()">Suspend</button>
-        <button class="inner-action" style="color:var(--sw-danger)" onclick="swank.deleteUserFromDetail()">Delete</button>
-        <button class="inner-action" id="ud-btn-device" onclick="swank.resetDevice()" style="display:none">Reset Device</button>
-      </div>
-      <!-- edit mode buttons -->
-      <div id="ud-footer-edit" style="display:none;gap:8px;width:100%;display:none">
-        <button class="btn-accent" style="flex:1" onclick="swank.saveUserEdit()">Save</button>
-        <button class="inner-action" onclick="swank.cancelUserEdit()">Cancel</button>
-      </div>
-    </div>
-  </div>
 </div>
 
 </div><!-- #app -->
@@ -6437,6 +6376,101 @@ var swank = (function(){
         el.style.display = '';
       })
       .catch(function() { el.style.display='none'; });
+  }
+
+
+
+  /* ── STAGING: User edit + reset device handlers ── */
+  function openEditUser() {
+    var ov = document.getElementById('user-detail-overlay');
+    if (!ov) return;
+    var viewRows = document.getElementById('ud-view-rows');
+    var editForm = document.getElementById('ud-edit-form');
+    var actRow   = document.getElementById('user-detail-actions');
+    if (viewRows) viewRows.style.display = 'none';
+    if (actRow)   actRow.style.display   = 'none';
+    if (editForm) {
+      // Pre-populate with current user data
+      var username = ov.querySelector('[data-action="edit"]');
+      var safeU = username ? username.getAttribute('data-user') : '';
+      var u = (S.allUsers||[]).find(function(x){ return x.username === safeU; });
+      if (u) {
+        var ef = function(id){ return document.getElementById(id); };
+        if (ef('ud-ef-name'))    ef('ud-ef-name').value    = u.fullName||'';
+        if (ef('ud-ef-mobile'))  ef('ud-ef-mobile').value  = u.mobile||'';
+        if (ef('ud-ef-email'))   ef('ud-ef-email').value   = u.email||'';
+        if (ef('ud-ef-empcode')) ef('ud-ef-empcode').value = u.empCode||'';
+        if (ef('ud-ef-password'))ef('ud-ef-password').value= '';
+        if (ef('ud-ef-role'))    ef('ud-ef-role').value    = u.role||'SALES';
+        if (ef('ud-ef-status'))  ef('ud-ef-status').value  = u.status||'ACTIVE';
+      }
+      editForm.style.display = 'block';
+    }
+  }
+
+  function cancelUserEdit() {
+    var viewRows = document.getElementById('ud-view-rows');
+    var editForm = document.getElementById('ud-edit-form');
+    var actRow   = document.getElementById('user-detail-actions');
+    if (editForm) editForm.style.display = 'none';
+    if (viewRows) viewRows.style.display = 'block';
+    if (actRow)   actRow.style.display   = '';
+  }
+
+  function saveUserEdit() {
+    var ov = document.getElementById('user-detail-overlay');
+    if (!ov) return;
+    var editBtn = ov.querySelector('[data-action="edit"]');
+    var safeU   = editBtn ? editBtn.getAttribute('data-user') : '';
+    if (!safeU) return;
+    var ef = function(id){ return document.getElementById(id); };
+    var updates = {
+      fullName:    (ef('ud-ef-name')    ||{}).value||undefined,
+      mobile:      (ef('ud-ef-mobile')  ||{}).value||undefined,
+      email:       (ef('ud-ef-email')   ||{}).value||undefined,
+      empCode:     (ef('ud-ef-empcode') ||{}).value||undefined,
+      role:        (ef('ud-ef-role')    ||{}).value||undefined,
+      status:      (ef('ud-ef-status')  ||{}).value||undefined
+    };
+    var pw = (ef('ud-ef-password')||{}).value||'';
+    if (pw.trim()) updates.newPassword = pw.trim();
+    // Remove undefined keys
+    Object.keys(updates).forEach(function(k){ if (!updates[k]) delete updates[k]; });
+    var errEl = ef('ud-ef-error');
+    _api('PUT', '/api/users/' + encodeURIComponent(safeU), updates)
+      .then(function(r){
+        if (r && r.success) {
+          _toast('User updated');
+          _closeUserDetail();
+          loadUsers();
+        } else {
+          if (errEl) { errEl.textContent = (r&&r.message)||'Could not save'; errEl.style.display='block'; }
+        }
+      })
+      .catch(function(){ if (errEl) { errEl.textContent='Connection error'; errEl.style.display='block'; } });
+  }
+
+  function resetDevice(username) {
+    var safeU = username || (function(){
+      var ov = document.getElementById('user-detail-overlay');
+      var btn = ov ? ov.querySelector('[data-action="reset-device"]') : null;
+      return btn ? btn.getAttribute('data-user') : '';
+    }());
+    if (!safeU) return;
+    var name = (function(){
+      var ov = document.getElementById('user-detail-overlay');
+      var btn = ov ? ov.querySelector('[data-action="reset-device"]') : null;
+      return btn ? (btn.getAttribute('data-name')||safeU) : safeU;
+    }());
+    swank.confirm('Reset Device', 'Clear device binding for ' + name + '? They will need to log in again on their device.', 'Reset', true, function(ok){
+      if (!ok) return;
+      _api('POST', '/api/users/' + encodeURIComponent(safeU) + '/reset-device', {})
+        .then(function(r){
+          if (r && r.success) { _toast('Device reset'); _closeUserDetail(); loadUsers(); }
+          else _toast((r&&r.message)||'Could not reset device');
+        })
+        .catch(function(){ _toast('Connection error'); });
+    });
   }
 
 
@@ -7960,6 +7994,8 @@ var swank = (function(){
       } else if (action === 'approve')    { updateUser(user, 'ACTIVE'); }
       else if (action === 'reject')       { updateUser(user, 'REJECTED'); }
       else if (action === 'reactivate')   { updateUser(user, 'ACTIVE'); }
+      else if (action === 'edit')          { openEditUser(); }
+      else if (action === 'reset-device')  { resetDevice(user); }
     });
   }
 
@@ -8005,6 +8041,9 @@ var swank = (function(){
         actions += '<button class="user-action-sm user-action-approve" data-action="reactivate" data-user="'+safeU+'">Reactivate</button>';
       }
       actions += '<button class="user-action-sm user-action-delete" data-action="delete" data-user="'+safeU+'" data-name="'+displayName+'">Delete</button>';
+      // STAGING: Edit + Reset Device
+      actions += '<button class="user-action-sm" data-action="edit" data-user="'+safeU+'" style="border-color:rgba(92,70,56,.3);color:var(--sw-accent)">Edit</button>';
+      actions += '<button class="user-action-sm" data-action="reset-device" data-user="'+safeU+'" data-name="'+displayName+'" style="border-color:rgba(92,70,56,.2);color:var(--sw-txt3)">Reset Device</button>';
     }
 
     var ov = document.getElementById('user-detail-overlay');
@@ -8021,13 +8060,30 @@ var swank = (function(){
       +'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
       +'</button>'
       +'</div>'
-      // Info rows
-      +'<div style="padding:0 20px">'+rows+'</div>'
+      // Edit form (hidden by default)
+      +'<div id="ud-edit-form" style="display:none;padding:16px 20px">'
+      +'<div style="display:flex;flex-direction:column;gap:10px">'
+      +'<div class="sw-form-field"><label class="sw-form-label">Full Name</label><input class="sw-user-edit-input" id="ud-ef-name" type="text" autocomplete="off"></div>'
+      +'<div class="sw-form-field"><label class="sw-form-label">Mobile</label><input class="sw-user-edit-input" id="ud-ef-mobile" type="tel" autocomplete="off"></div>'
+      +'<div class="sw-form-field"><label class="sw-form-label">Email</label><input class="sw-user-edit-input" id="ud-ef-email" type="email" autocomplete="off"></div>'
+      +'<div class="sw-form-field"><label class="sw-form-label">Emp Code</label><input class="sw-user-edit-input" id="ud-ef-empcode" type="text" autocomplete="off"></div>'
+      +'<div class="sw-form-field"><label class="sw-form-label">New Password <span style="font-weight:400;font-size:10px">(leave blank to keep)</span></label><input class="sw-user-edit-input" id="ud-ef-password" type="password" autocomplete="new-password"></div>'
+      +'<div class="sw-form-field"><label class="sw-form-label">Role</label>'
+      +'<select class="sw-user-edit-input" id="ud-ef-role"><option value="SALES">Sales</option><option value="MANAGER">Manager</option><option value="ADMIN">Admin</option></select></div>'
+      +'<div class="sw-form-field"><label class="sw-form-label">Status</label>'
+      +'<select class="sw-user-edit-input" id="ud-ef-status"><option value="ACTIVE">Active</option><option value="SUSPENDED">Suspended</option><option value="PENDING">Pending</option><option value="REJECTED">Rejected</option></select></div>'
+      +'<div id="ud-ef-error" style="display:none;color:var(--sw-danger);font-size:13px;padding:4px 0"></div>'
+      +'<div style="display:flex;gap:8px;margin-top:4px">'
+      +'<button class="btn-accent" style="flex:1" onclick="swank.saveUserEdit()">Save</button>'
+      +'<button class="inner-action" onclick="swank.cancelUserEdit()">Cancel</button>'
+      +'</div></div></div>'
+      // Info rows (view mode)
+      +'<div id="ud-view-rows" style="padding:0 20px">'+rows+'</div>'
       // Actions
       +(actions ? '<div class="user-mgmt-actions-row" id="user-detail-actions">'+actions+'</div>' : '')
       +'</div>';
 
-    // Bind action buttons in the overlay
+    // Bind action buttons
     var actRow = document.getElementById('user-detail-actions');
     if (actRow) {
       actRow._userBound = false;
@@ -8103,6 +8159,7 @@ var swank = (function(){
     showScreen,
     loadUsers, filterUsers, updateUser, deleteUser,
     onUserSearch, clearUserSearch, _statFilter,
+    openEditUser, cancelUserEdit, saveUserEdit, resetDevice,
     openCompanySheet, closeCompanySheet, filterCompanyList,
     openCollectionSheet, closeCollectionSheet, filterCollectionList, setCollectionFilter, clearCollection,
     setPriceMode, onColSearchInput, clearColSearch,
@@ -14062,7 +14119,7 @@ var furnOrders = (function(){
           + '<div class="fo-mob-cust">'+_esc(o.customerName||'—')+'</div>'
           + (o.customerMobile ? '<div class="fo-mob-cust-mob">'+_esc(o.customerMobile)+'</div>' : '')
         + '</div>'
-        + '<div class="fo-mob-meta">'+_badge(o.status)+'<button class="fo-menu-btn" onclick="furnOrders.openMenu(event,\''+safeId+'\')">Γï«</button></div>'
+        + '<div class="fo-mob-meta">'+_badge(o.status)+'<button class="fo-menu-btn" onclick="furnOrders.openMenu(event,\''+safeId+'\')">☰</button></div>'
         + '</div>'
         + (itemLine ? '<div class="fo-mob-item"><strong>'+itemLine+'</strong></div>' : '')
         + (chips ? '<div class="fo-mob-chips">'+chips+'</div>' : '');
@@ -14077,13 +14134,13 @@ var furnOrders = (function(){
         +'<td class="fo-col-desktop fc-prod">'+_esc(o.productName||'—')+'</td>'
         +'<td class="fo-col-desktop fc-size">'+_esc(o.size||'—')+'</td>'
         +'<td class="fo-col-desktop fc-qty" style="text-align:right">'+_esc(String(o.qty||''))+'</td>'
-        +'<td class="fo-col-desktop fc-mrp" style="text-align:right">'+( o.mrp ? 'Γé╣'+o.mrp : '—' )+'</td>'
+        +'<td class="fo-col-desktop fc-mrp" style="text-align:right">'+( o.mrp ? '₹'+o.mrp : '—' )+'</td>'
         +'<td class="fo-col-desktop fc-serial">'+_esc(o.serialNumber||'—')+'</td>'
         +'<td class="fo-col-tablet fc-dord">'+_fmtDate(o.dateOfOrder)+'</td>'
         +'<td class="fo-col-desktop fc-recv">'+_fmtDate(o.receivingDate)+'</td>'
         +'<td class="fc-status">'+_badge(o.status)+'</td>'
         +'<td class="fo-col-tablet fc-remark">'+_esc(o.remark||'')+'</td>'
-        +'<td class="fo-td-menu"><button class="fo-menu-btn" onclick="furnOrders.openMenu(event,\''+safeId+'\')">Γï«</button></td>'
+        +'<td class="fo-td-menu"><button class="fo-menu-btn" onclick="furnOrders.openMenu(event,\''+safeId+'\')">☰</button></td>'
         +'</tr>';
     }).join('');
   }
@@ -14125,7 +14182,7 @@ var furnOrders = (function(){
           + '<div class="fo-mob-cust">'+_esc(o.customerName||'—')+'</div>'
           + (o.customerMobile ? '<div class="fo-mob-cust-mob">'+_esc(o.customerMobile)+'</div>' : '')
         + '</div>'
-        + '<div class="fo-mob-meta">'+_badge(o.status)+'<button class="fo-menu-btn" onclick="furnOrders.openMenu(event,\''+safeId+'\')">Γï«</button></div>'
+        + '<div class="fo-mob-meta">'+_badge(o.status)+'<button class="fo-menu-btn" onclick="furnOrders.openMenu(event,\''+safeId+'\')">☰</button></div>'
         + '</div>'
         + (itemLine ? '<div class="fo-mob-item"><strong>'+itemLine+'</strong></div>' : '')
         + (chips ? '<div class="fo-mob-chips">'+chips+'</div>' : '');
@@ -14145,7 +14202,7 @@ var furnOrders = (function(){
         +'<td class="fo-col-desktop fc-recv">'+_fmtDate(o.receivingDate)+'</td>'
         +'<td class="fc-status">'+_badge(o.status)+'</td>'
         +'<td class="fo-col-tablet fc-remark">'+_esc(o.remark||'')+'</td>'
-        +'<td class="fo-td-menu"><button class="fo-menu-btn" onclick="furnOrders.openMenu(event,\''+safeId+'\')">Γï«</button></td>'
+        +'<td class="fo-td-menu"><button class="fo-menu-btn" onclick="furnOrders.openMenu(event,\''+safeId+'\')">☰</button></td>'
         +'</tr>';
     }).join('');
   }
@@ -14371,7 +14428,7 @@ var furnOrders = (function(){
       .then(function(r){
         if (r && r.success) {
           _api('PUT', '/api/furnishing-orders/' + encodeURIComponent(o.id), {})
-            .then(function(){ _toast('Customer saved Γ£ô'); load(); })
+            .then(function(){ _toast('Customer saved ✓'); load(); })
             .catch(function(){ _toast('Customer saved but order not linked'); })
           if (typeof swankCustomers !== 'undefined') swankCustomers.openProfile(r.customerId);
         } else if (r && r.duplicate) {
@@ -14671,7 +14728,7 @@ var furnOrders = (function(){
     _api('POST', '/api/furnishing-orders', payload)
       .then(function(r){
         if(btn){btn.textContent='Save Order';btn.disabled=false;}
-        if (r && r.success) { closeAddSheet(); _toast('Order saved Γ£ô'); load(); }
+        if (r && r.success) { closeAddSheet(); _toast('Order saved ✓'); load(); }
         else { if(errEl){errEl.textContent=(r&&r.error)||'Save failed';errEl.style.display='';} }
       })
       .catch(function(err){
@@ -14692,7 +14749,7 @@ var furnOrders = (function(){
       _api('POST', '/api/furnishing-orders/from-estimate', {estId: estId})
         .then(function(r){
           if (r && r.success) {
-            _toast(r.count+' order(s) created Γ£ô');
+            _toast(r.count+' order(s) created ✓');
             if (typeof swankEst !== 'undefined' && swankEst._setEstOrderStatus) swankEst._setEstOrderStatus(estId, 'Ordered');
             if (document.getElementById('screen-furn-orders') && document.getElementById('screen-furn-orders').classList.contains('active')) load();
           } else if (r && r.alreadySent) {
@@ -14832,7 +14889,7 @@ var furnOrders = (function(){
         .then(function(r) {
           if (delBtn) { delBtn.disabled = false; delBtn.textContent = 'Delete Selected'; }
           if (r && r.success) {
-            _toast('Deleted ' + r.deleted + ' order' + (r.deleted > 1 ? 's' : '') + ' Γ£ô');
+            _toast('Deleted ' + r.deleted + ' order' + (r.deleted > 1 ? 's' : '') + ' ✓');
             FO.selectedIds = {}; FO.selectMode = false;
             var bar = _el('fo-select-bar'); if (bar) bar.classList.remove('visible');
             load();
@@ -14882,10 +14939,10 @@ var swankAnalytics = (function(){
   function _esc(s)  { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
   function _fmt(n)  { return Number(Math.round(n)).toLocaleString('en-IN'); }
   function _fmtK(n) {
-    if (n >= 10000000) return 'Γé╣' + (n/10000000).toFixed(1) + 'Cr';
-    if (n >= 100000)   return 'Γé╣' + (n/100000).toFixed(1)   + 'L';
-    if (n >= 1000)     return 'Γé╣' + (n/1000).toFixed(1)     + 'K';
-    return 'Γé╣' + _fmt(n);
+    if (n >= 10000000) return '₹' + (n/10000000).toFixed(1) + 'Cr';
+    if (n >= 100000)   return '₹' + (n/100000).toFixed(1)   + 'L';
+    if (n >= 1000)     return '₹' + (n/1000).toFixed(1)     + 'K';
+    return '₹' + _fmt(n);
   }
 
   /* ── Period selector ── */
@@ -15102,7 +15159,7 @@ var swankProjects = (function() {
   }
   function _fmtPrice(v) {
     var n = parseFloat(v)||0;
-    return n > 0 ? 'Γé╣'+n.toLocaleString('en-IN') : '—';
+    return n > 0 ? '₹'+n.toLocaleString('en-IN') : '—';
   }
   function _statusClass(s) {
     var map = {'Active':'proj-status-active','Completed':'proj-status-completed','On Hold':'proj-status-on-hold','Cancelled':'proj-status-cancelled'};
@@ -15404,7 +15461,7 @@ var swankProjects = (function() {
         if (btn) { btn.disabled = false; btn.textContent = 'Save Project'; }
         if (!r || !r.success) { _showFormError(r && r.message || 'Save failed'); return; }
         _hide('proj-form-overlay');
-        _toast('Γ£ô Project saved');
+        _toast('✓ Project saved');
         PR.loaded = false;
         if (data.id) {
           // Refresh detail view
@@ -15511,7 +15568,7 @@ var swankProjects = (function() {
     promise.then(function() {
       if (saveBtn) { saveBtn.disabled = false; saveBtn.textContent = 'Add Room'; }
       _hide('proj-room-overlay');
-      _toast('Γ£ô Room' + (toAdd.length > 1 ? 's' : '') + ' added');
+      _toast('✓ Room' + (toAdd.length > 1 ? 's' : '') + ' added');
       openProject(projectId);
     }).catch(function() {
       if (saveBtn) { saveBtn.disabled = false; saveBtn.textContent = 'Add Room'; }
@@ -15695,9 +15752,9 @@ var swankProjects = (function() {
     }
     var mrpIncl = gst > 0 ? Math.ceil(mrp * (1 + gst/100)) : mrp;
 
-    _el('proj-picker-mrp-val').textContent      = 'Γé╣' + mrp.toLocaleString('en-IN');
+    _el('proj-picker-mrp-val').textContent      = '₹' + mrp.toLocaleString('en-IN');
     _el('proj-picker-gst-val').textContent       = gst > 0 ? gst + '%' : '—';
-    _el('proj-picker-mrp-incl-val').textContent  = gst > 0 ? 'Γé╣' + mrpIncl.toLocaleString('en-IN') : '—';
+    _el('proj-picker-mrp-incl-val').textContent  = gst > 0 ? '₹' + mrpIncl.toLocaleString('en-IN') : '—';
     _show('proj-picker-mrp-section');
 
     // Store for save
@@ -15745,7 +15802,7 @@ var swankProjects = (function() {
         if (!r || !r.success) { _toast('Save failed'); return; }
         _hide('proj-picker-overlay');
         PR.detail = null; PR._currentMrp = 0; PR._currentMrpIncl = 0;
-        _toast('Γ£ô Selection saved');
+        _toast('✓ Selection saved');
         openProject(projectId);
       })
       .catch(function() {
@@ -15776,6 +15833,105 @@ var swankProjects = (function() {
 }());
 
 </script>
+
+
+/* ── STAGING: PDF pinch-to-zoom + scroll-wheel zoom ── */
+(function(){
+  var MIN_SCALE = 0.4, MAX_SCALE = 4.0;
+
+  function _initPdfZoom(scrollEl, getDocEl, getBaseScale) {
+    if (!scrollEl || scrollEl._zoomInited) return;
+    scrollEl._zoomInited = true;
+    var currentScale = getBaseScale ? getBaseScale() : 1;
+
+    function applyScale(s) {
+      currentScale = Math.max(MIN_SCALE, Math.min(MAX_SCALE, s));
+      var doc = getDocEl();
+      if (!doc) return;
+      doc.style.transform       = 'scale(' + currentScale + ')';
+      doc.style.transformOrigin = 'top left';
+      var h = doc.scrollHeight || doc.offsetHeight || 1000;
+      scrollEl.style.minHeight  = Math.ceil(h * currentScale) + 'px';
+    }
+
+    // ── Pinch-to-zoom (touch) ──────────────────────────────────────
+    var startDist = 0, startScale = 1;
+
+    function dist(t) {
+      var dx = t[0].clientX - t[1].clientX;
+      var dy = t[0].clientY - t[1].clientY;
+      return Math.sqrt(dx*dx + dy*dy);
+    }
+
+    scrollEl.addEventListener('touchstart', function(e) {
+      if (e.touches.length === 2) {
+        e.preventDefault();
+        startDist  = dist(e.touches);
+        startScale = currentScale;
+      }
+    }, { passive: false });
+
+    scrollEl.addEventListener('touchmove', function(e) {
+      if (e.touches.length === 2) {
+        e.preventDefault();
+        var d = dist(e.touches);
+        if (startDist > 0) applyScale(startScale * (d / startDist));
+      }
+    }, { passive: false });
+
+    scrollEl.addEventListener('touchend', function(e) {
+      if (e.touches.length < 2) startDist = 0;
+    }, { passive: true });
+
+    // ── Scroll-wheel zoom (desktop) ────────────────────────────────
+    scrollEl.addEventListener('wheel', function(e) {
+      if (!e.ctrlKey && !e.metaKey) return; // normal scroll passes through
+      e.preventDefault();
+      var delta = e.deltaY > 0 ? 0.9 : 1.1;
+      applyScale(currentScale * delta);
+    }, { passive: false });
+  }
+
+  // ── Fabric PDF (est-pdf-overlay) ──────────────────────────────────
+  (function() {
+    var overlay = document.getElementById('est-pdf-overlay');
+    if (!overlay) return;
+    var obs = new MutationObserver(function() {
+      var scrollEl = document.getElementById('est-pdf-scroll');
+      var wrap     = document.getElementById('est-pdf-preview-wrap');
+      if (!scrollEl || !wrap) return;
+      _initPdfZoom(scrollEl, function(){ return wrap.querySelector('.est-pdf-doc'); }, function(){
+        var doc = wrap.querySelector('.est-pdf-doc');
+        if (!doc) return 1;
+        var m = (doc.style.transform||'').match(/scale\(([\d.]+)\)/);
+        return m ? parseFloat(m[1]) : 1;
+      });
+    });
+    obs.observe(overlay, { attributes: true, attributeFilter: ['style'] });
+  }());
+
+  // ── Sofa PDF (sf-pdf-ov) ──────────────────────────────────────────
+  (function() {
+    var overlay = document.getElementById('sf-pdf-ov');
+    if (!overlay) return;
+    var obs = new MutationObserver(function() {
+      var scrollEl = overlay.querySelector('.sf-pdf-scroll');
+      var content  = document.getElementById('sf-pdf-content');
+      if (!scrollEl || !content) return;
+      _initPdfZoom(scrollEl, function(){
+        return content.querySelector('.est-pdf-doc') || content.firstElementChild || content;
+      }, function(){
+        var doc = content.querySelector('.est-pdf-doc') || content.firstElementChild;
+        if (!doc) return 1;
+        var m = (doc.style.transform||'').match(/scale\(([\d.]+)\)/);
+        return m ? parseFloat(m[1]) : 1;
+      });
+    });
+    obs.observe(overlay, { attributes: true, attributeFilter: ['class'] });
+  }());
+
+}());
+
 <style>
 /* Swank Confirm Modal */
 #sw-confirm-modal{
